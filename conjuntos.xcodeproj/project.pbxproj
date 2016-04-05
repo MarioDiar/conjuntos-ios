@@ -13,6 +13,7 @@
 		B10225361CB033A9003DE77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10225341CB033A9003DE77A /* Main.storyboard */; };
 		B10225381CB033A9003DE77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10225371CB033A9003DE77A /* Assets.xcassets */; };
 		B102253B1CB033A9003DE77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10225391CB033A9003DE77A /* LaunchScreen.storyboard */; };
+		B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B10225371CB033A9003DE77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B102253A1CB033A9003DE77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B102253C1CB033A9003DE77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaConjuntos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				B102252D1CB033A9003DE77A /* conjuntos */,
-				B102252C1CB033A9003DE77A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +52,7 @@
 				B102252B1CB033A9003DE77A /* conjuntos.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B102252D1CB033A9003DE77A /* conjuntos */ = {
@@ -63,6 +65,8 @@
 				B10225371CB033A9003DE77A /* Assets.xcassets */,
 				B10225391CB033A9003DE77A /* LaunchScreen.storyboard */,
 				B102253C1CB033A9003DE77A /* Info.plist */,
+				B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */,
+				B102252C1CB033A9003DE77A /* Products */,
 			);
 			path = conjuntos;
 			sourceTree = "<group>";
@@ -139,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10225331CB033A9003DE77A /* SecondViewController.swift in Sources */,
+				B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */,
 				B102252F1CB033A9003DE77A /* AppDelegate.swift in Sources */,
 				B10225311CB033A9003DE77A /* FirstViewController.swift in Sources */,
 			);
@@ -288,6 +293,7 @@
 				B10225411CB033A9003DE77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

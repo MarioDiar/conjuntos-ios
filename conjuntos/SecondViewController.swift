@@ -10,6 +10,12 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var preguntaTextview: UITextView!
+    @IBOutlet weak var vistaConjuntos: VistaConjuntos!
+    @IBOutlet weak var numConjuntosSegment: UISegmentedControl!
+    @IBOutlet weak var unionInterSegment: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
