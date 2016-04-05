@@ -18,41 +18,40 @@ class VistaConjuntos: UIView {
     override func drawRect(rect: CGRect) {
         
         let contexto = UIGraphicsGetCurrentContext()
-        var color = UIColor.grayColor()
+        var color = UIColor.blackColor()
         
         //Nueva Capa
         let capa = CGLayerCreateWithContext(contexto, self.frame.size, nil)
-        let contextoCapa = CGLayerGetContext(capa)
         //CGContextDrawLayerInRect(contexto, self.frame, capa)
         
         CGContextSetLineWidth(contexto, 2.0)
-        CGContextSetStrokeColorWithColor(contexto, UIColor.blueColor().CGColor)
+        CGContextSetStrokeColorWithColor(contexto, UIColor.blackColor().CGColor)
         CGContextSetFillColorWithColor(contexto, color.CGColor)
         
         //Elipse
-        let theRect: CGRect = CGRectMake(50, 50, 100, 100)
+        let theRect: CGRect = CGRectMake(65, 15, 150, 150)
         CGContextFillEllipseInRect(contexto, theRect)
         CGContextStrokeEllipseInRect(contexto, theRect)
         
         //Nuevos Colores
         color = UIColor.whiteColor()
-        CGContextSetStrokeColorWithColor(contexto, UIColor.greenColor().CGColor)
+        CGContextSetStrokeColorWithColor(contexto, UIColor.whiteColor().CGColor)
         CGContextSetFillColorWithColor(contexto, color.CGColor)
         
         //Elipse
-        let elipse: CGRect = CGRectMake(25, 75, 100, 100)
+        let elipse: CGRect = CGRectMake(25, 85, 150, 150)
         CGContextFillEllipseInRect(contexto, elipse)
         CGContextStrokeEllipseInRect(contexto, elipse)
         
         
         //Nuevos Colores
-        color = UIColor.brownColor()
-        CGContextSetStrokeColorWithColor(contextoCapa, UIColor.redColor().CGColor)
-        CGContextSetFillColorWithColor(contextoCapa, color.CGColor)
+        color = UIColor.grayColor()
+        CGContextSetStrokeColorWithColor(contexto, UIColor.grayColor().CGColor)
+        CGContextSetFillColorWithColor(contexto, color.CGColor)
         
         
         //Elipse
-        let elipseTwo: CGRect = CGRectMake(75, 75, 100, 100)
+        let elipseTwo: CGRect = CGRectMake(100, 85, 150, 150)
         CGContextFillEllipseInRect(contexto, elipseTwo)
         CGContextStrokeEllipseInRect(contexto, elipseTwo)
         
