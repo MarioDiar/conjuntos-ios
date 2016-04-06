@@ -10,6 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var preguntaLabel: UITextView!
     @IBOutlet weak var preguntaTextview: UITextView!
     @IBOutlet weak var vistaConjuntos: VistaConjuntos!
     @IBOutlet weak var numConjuntosSegment: UISegmentedControl!

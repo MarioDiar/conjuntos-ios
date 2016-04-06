@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOt-E1-6F2" customClass="VistaConjuntos" customModule="conjuntos" customModuleProvider="target">
-                                <rect key="frame" x="20" y="198" width="280" height="248"/>
+                                <rect key="frame" x="20" y="197" width="280" height="248"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.98519692985333662" blue="0.75023340240382497" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="137" y="452" width="47" height="29"/>
+                                <rect key="frame" x="137" y="453" width="47" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.43529411764705883" green="0.11764705882352941" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -32,18 +32,8 @@
                                 </segments>
                                 <color key="tintColor" red="0.9738546380090497" green="0.9738546380090497" blue="0.9738546380090497" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
-                                <rect key="frame" x="71" y="485" width="179" height="29"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.43529411764705883" green="0.11764705882352941" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="Union"/>
-                                    <segment title="Interseccion"/>
-                                </segments>
-                                <color key="tintColor" red="0.90959535256410251" green="0.90959535256410251" blue="0.90959535256410251" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Conjunto A: {}  Conjunto B: {}" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yls-n2-PVn">
-                                <rect key="frame" x="20" y="109" width="280" height="89"/>
+                                <rect key="frame" x="20" y="108" width="280" height="89"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,6 +48,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
+                                <rect key="frame" x="71" y="483" width="179" height="29"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.43529411764705883" green="0.11764705882352941" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Union"/>
+                                    <segment title="Interseccion"/>
+                                </segments>
+                                <color key="tintColor" red="0.90959535256410251" green="0.90959535256410251" blue="0.90959535256410251" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.21428403092006032" green="0.21428403092006032" blue="0.21428403092006032" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,12 +65,14 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="conjuntosTextview" destination="Yls-n2-PVn" id="iPo-ER-DmE"/>
+                        <outlet property="numConjuntosSegment" destination="NAw-iv-n5a" id="F4c-jT-Td6"/>
+                        <outlet property="unionInterSegment" destination="TMJ-hx-Tv6" id="fcw-fG-KKl"/>
                         <outlet property="vistaConjuntos" destination="pOt-E1-6F2" id="Xtq-m5-LxO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="-258"/>
+            <point key="canvasLocation" x="471" y="-268"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -104,24 +106,24 @@
                                 </segments>
                                 <color key="tintColor" red="0.97385463800000005" green="0.97385463800000005" blue="0.97385463800000005" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYH-NV-uxw" customClass="VistaConjuntos" customModule="conjuntos" customModuleProvider="target">
-                                <rect key="frame" x="20" y="198" width="280" height="248"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.98519692989999996" blue="0.75023340240000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Kf-np-J4c">
-                                <rect key="frame" x="20" y="109" width="280" height="89"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.41288060897435896" green="0.41288060897435896" blue="0.41288060897435896" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="¿ La interseccion AuB es {1,2,4} ?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bjE-j5-1Cn">
                                 <rect key="frame" x="39" y="48" width="243" height="65"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.97237221730000001" green="0.98912582680000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYH-NV-uxw" customClass="VistaConjuntos" customModule="conjuntos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="196" width="280" height="248"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.98519692989999996" blue="0.75023340240000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Kf-np-J4c">
+                                <rect key="frame" x="20" y="107" width="280" height="89"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.41288060897435896" green="0.41288060897435896" blue="0.41288060897435896" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -132,6 +134,7 @@
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="numConjuntosSegment" destination="YTc-3Y-Pee" id="P6z-ix-AdD"/>
+                        <outlet property="preguntaLabel" destination="bjE-j5-1Cn" id="oqD-rh-tmh"/>
                         <outlet property="preguntaTextview" destination="bjE-j5-1Cn" id="VHu-xr-fb0"/>
                         <outlet property="unionInterSegment" destination="MJ0-BU-k9y" id="fVA-Dk-X0D"/>
                         <outlet property="vistaConjuntos" destination="aYH-NV-uxw" id="2Y9-Qd-cIF"/>
@@ -139,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="350"/>
+            <point key="canvasLocation" x="471" y="347"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -163,7 +166,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="5"/>
+            <point key="canvasLocation" x="73" y="4"/>
         </scene>
     </scenes>
     <resources>
