@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        vistaConjuntos.conjuntos.removeAll()
         let c1 : Conjunto = Conjunto()
         let c2 : Conjunto = Conjunto()
         
@@ -37,6 +37,23 @@ class FirstViewController: UIViewController {
     
     //TODO create segment function that changes num of items in conjuntos whenever it is clicked
     
+    @IBAction func cambiaNumSegment(sender: UISegmentedControl) {
+        let c1 : Conjunto = Conjunto()
+        let c2 : Conjunto = Conjunto()
+        let c3 : Conjunto = Conjunto()
+        
+        vistaConjuntos.conjuntos.removeAll()
+        
+        if sender.selectedSegmentIndex == 0 {
+            vistaConjuntos.conjuntos.append(c1)
+            vistaConjuntos.conjuntos.append(c2)
+            vistaConjuntos.conjuntos.append(c3)
+        } else {
+            vistaConjuntos.conjuntos.append(c1)
+            vistaConjuntos.conjuntos.append(c2)
+        }
+        vistaConjuntos.setNeedsDisplay()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

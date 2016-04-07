@@ -31,6 +31,9 @@
                                     <segment title="2"/>
                                 </segments>
                                 <color key="tintColor" red="0.9738546380090497" green="0.9738546380090497" blue="0.9738546380090497" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
+                                </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Conjunto A: {}  Conjunto B: {}" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yls-n2-PVn">
                                 <rect key="frame" x="20" y="108" width="280" height="89"/>
