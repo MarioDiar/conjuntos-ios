@@ -15,6 +15,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var numConjuntosSegment: UISegmentedControl!
     @IBOutlet weak var unionInterSegment: UISegmentedControl!
     
+    
+    
     var conjuntos = [Conjunto]()
     
     
