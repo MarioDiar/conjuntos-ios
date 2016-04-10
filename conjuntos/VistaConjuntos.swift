@@ -32,11 +32,12 @@ class VistaConjuntos: UIView {
         let negroTrans = CGColorCreateCopyWithAlpha(UIColor.orangeColor().CGColor, 0.5)
         let magentaTrans = CGColorCreateCopyWithAlpha(UIColor.magentaColor().CGColor, 0.5)
         let blancoTrans = CGColorCreateCopyWithAlpha(UIColor.cyanColor().CGColor, 0.5)
+        let negro = CGColorCreateCopyWithAlpha(UIColor.blackColor().CGColor, 1)
         
         
         //Capa para mostrar los elementos de los conjuntos
-        let capaElementos = CGLayerCreateWithContext(contexto, self.frame.size, nil)
-        let contextoElementos = CGLayerGetContext(capaElementos)
+        //let capaElementos = CGLayerCreateWithContext(contexto, self.frame.size, nil)
+        //let contextoElementos = CGLayerGetContext(capaElementos)
         
         //Setting linewidth and stroke color
         CGContextSetLineWidth(contexto, 1.0)
@@ -62,6 +63,8 @@ class VistaConjuntos: UIView {
             CGContextStrokeEllipseInRect(contexto, elipse)
             
             //DRAWING INVIS RECTANGLE TO DRAW TEXT ON
+        
+            
             
         } else if conjuntos.count == 3 {
             //DRAWING ELLIPSES
@@ -88,8 +91,43 @@ class VistaConjuntos: UIView {
             let elipseTwo: CGRect = CGRectMake(100, 85, 150, 150)
             CGContextFillEllipseInRect(contexto, elipseTwo)
             CGContextStrokeEllipseInRect(contexto, elipseTwo)
+            
+            //Setting new colors to stroke and fill
+            CGContextSetFillColorWithColor(contexto, negro)
+            
+            //DRAWING INVIS RECTANGLES TO DRAW ELEMENTS
+            //y,x
 
+            //top rectangulo
+            var rectanguloTexto: CGRect = CGRectMake(115, 30, 60, 50)
+            CGContextFillRect(contexto, rectanguloTexto)
+            
+            //botleft rectangulo
+            rectanguloTexto = CGRectMake(35, 147, 60, 50)
+            CGContextFillRect(contexto, rectanguloTexto)
+            //botright rectangulo
+            rectanguloTexto = CGRectMake(180, 155, 60, 50)
+            CGContextFillRect(contexto, rectanguloTexto)
+            
+            //inter left
+            rectanguloTexto = CGRectMake(73, 90, 40, 40)
+            CGContextFillRect(contexto, rectanguloTexto)
+            //inter right
+            rectanguloTexto = CGRectMake(165, 90, 40, 40)
+            CGContextFillRect(contexto, rectanguloTexto)
+            //inter bottom
+            rectanguloTexto = CGRectMake(118, 165, 44, 44)
+            CGContextFillRect(contexto, rectanguloTexto)
+            
+            //tri conjunto
+            rectanguloTexto = CGRectMake(117, 116, 44, 44)
+            CGContextFillRect(contexto, rectanguloTexto)
+            
+            
+            
+            
         }
+        
     }
 }
 
