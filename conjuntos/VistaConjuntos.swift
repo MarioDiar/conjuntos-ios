@@ -21,7 +21,7 @@ class VistaConjuntos: UIView {
     
     var number = 8
     
-    var s: NSString = "Whereof we cannot speak, thereof we must remain silent."
+    var s: NSString = "1 2 3"
     
     //Drawing function
     override func drawRect(rect: CGRect) {
@@ -32,7 +32,7 @@ class VistaConjuntos: UIView {
         let negroTrans = CGColorCreateCopyWithAlpha(UIColor.orangeColor().CGColor, 0.5)
         let magentaTrans = CGColorCreateCopyWithAlpha(UIColor.magentaColor().CGColor, 0.5)
         let blancoTrans = CGColorCreateCopyWithAlpha(UIColor.cyanColor().CGColor, 0.5)
-        let negro = CGColorCreateCopyWithAlpha(UIColor.blackColor().CGColor, 1)
+        let negro = CGColorCreateCopyWithAlpha(UIColor.blackColor().CGColor, 0.0)
         
         
         //Capa para mostrar los elementos de los conjuntos
@@ -83,7 +83,6 @@ class VistaConjuntos: UIView {
             CGContextFillEllipseInRect(contexto, elipse)
             CGContextStrokeEllipseInRect(contexto, elipse)
             
-            
             //Setting new colors to stroke and fill
             CGContextSetFillColorWithColor(contexto, blancoTrans)
             
@@ -95,18 +94,20 @@ class VistaConjuntos: UIView {
             //Setting new colors to stroke and fill
             CGContextSetFillColorWithColor(contexto, negro)
             
+        
+            
             //DRAWING INVIS RECTANGLES TO DRAW ELEMENTS
-            //y,x
+            //y, x
 
             //top rectangulo
             var rectanguloTexto: CGRect = CGRectMake(115, 30, 60, 50)
             CGContextFillRect(contexto, rectanguloTexto)
             
             //botleft rectangulo
-            rectanguloTexto = CGRectMake(35, 147, 60, 50)
+            rectanguloTexto = CGRectMake(38, 155, 60, 50)
             CGContextFillRect(contexto, rectanguloTexto)
             //botright rectangulo
-            rectanguloTexto = CGRectMake(180, 155, 60, 50)
+            rectanguloTexto = CGRectMake(177, 157, 60, 50)
             CGContextFillRect(contexto, rectanguloTexto)
             
             //inter left
@@ -123,8 +124,16 @@ class VistaConjuntos: UIView {
             rectanguloTexto = CGRectMake(117, 116, 44, 44)
             CGContextFillRect(contexto, rectanguloTexto)
             
+            //DRAWING TEXT ON CONTEXT
+            let font = UIFont(name: "Helvetica Bold", size: 14.0)
+            
+            let textFontAttributes : [String : AnyObject] =
+            [
+                NSFontAttributeName: font!
+            ]
             
             
+            s.drawInRect(rectanguloTexto, withAttributes: textFontAttributes)
             
         }
         
