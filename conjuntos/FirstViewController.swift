@@ -32,8 +32,10 @@ class FirstViewController: UIViewController {
     @IBAction func cambiaNumSegment(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             vistaConjuntos.numConjuntos = 3
+            vistaConjuntos.diagrama = Diagrama(numConjuntos: 3)
         } else {
             vistaConjuntos.numConjuntos = 2
+            vistaConjuntos.diagrama = Diagrama(numConjuntos: 2)
         }
         vistaConjuntos.setNeedsDisplay()
     }
