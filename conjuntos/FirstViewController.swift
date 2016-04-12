@@ -15,53 +15,25 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var numConjuntosSegment: UISegmentedControl!
     @IBOutlet weak var unionInterSegment: UISegmentedControl!
     
-    var conjuntos = [Conjunto]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        vistaConjuntos.conjuntos.removeAll()
-        let c1 : Conjunto = Conjunto()
-        let c2 : Conjunto = Conjunto()
-        let c3 : Conjunto = Conjunto()
         
-        for i in 0...4 {
-            c1.datos[i] = i
-        }
-        
-        for i in 0...4 {
-            c2.datos[i] = i+7
-        }
-        
-        for i in 0...4 {
-            c3.datos[i] = i+13
-        }
         
         if numConjuntosSegment.selectedSegmentIndex == 0 {
-            
-            vistaConjuntos.conjuntos.append(c1)
-            vistaConjuntos.conjuntos.append(c2)
-            vistaConjuntos.conjuntos.append(c3)
+            vistaConjuntos.numConjuntos = 3
+            vistaConjuntos.diagrama = Diagrama(numConjuntos: 3)
         } else {
-            vistaConjuntos.conjuntos.append(c1)
-            vistaConjuntos.conjuntos.append(c2)
+            vistaConjuntos.numConjuntos = 2
+            vistaConjuntos.diagrama = Diagrama(numConjuntos: 2)
         }
     }
     //TODO create loadData function to avoid repeating viewDidload and cambiaNum code
     
     @IBAction func cambiaNumSegment(sender: UISegmentedControl) {
-        let c1 : Conjunto = Conjunto()
-        let c2 : Conjunto = Conjunto()
-        let c3 : Conjunto = Conjunto()
-        
-        vistaConjuntos.conjuntos.removeAll()
-        
         if sender.selectedSegmentIndex == 0 {
-            vistaConjuntos.conjuntos.append(c1)
-            vistaConjuntos.conjuntos.append(c2)
-            vistaConjuntos.conjuntos.append(c3)
+            vistaConjuntos.numConjuntos = 3
         } else {
-            vistaConjuntos.conjuntos.append(c1)
-            vistaConjuntos.conjuntos.append(c2)
+            vistaConjuntos.numConjuntos = 2
         }
         vistaConjuntos.setNeedsDisplay()
     }

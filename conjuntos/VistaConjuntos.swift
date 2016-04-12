@@ -13,12 +13,10 @@ import UIKit
 class VistaConjuntos: UIView {
     
     var conjuntos = [Conjunto]()
+    var diagrama : Diagrama!
+    var numConjuntos = 0
     
     var operacion = Operacion()
-    
-    var testString = ""
-    
-    var number = 8
     
     //Drawing function
     override func drawRect(rect: CGRect) {
@@ -41,7 +39,7 @@ class VistaConjuntos: UIView {
         CGContextSetStrokeColorWithColor(contexto, UIColor.blackColor().CGColor)
 
         
-        if conjuntos.count == 2 {
+        if numConjuntos == 2 {
             //DRAWING ELLIPSES
             //Elipse-setting elipse stroke and fill color
             
@@ -63,7 +61,7 @@ class VistaConjuntos: UIView {
         
             
             
-        } else if conjuntos.count == 3 {
+        } else if numConjuntos == 3 {
             //DRAWING ELLIPSES
             //Elipse-setting elipse stroke and fill color
             CGContextSetFillColorWithColor(contexto, negroTrans)
@@ -126,10 +124,10 @@ class VistaConjuntos: UIView {
             
             let textFontAttributes : [String : AnyObject] = [ NSFontAttributeName: font! ]
             
-            (operacion.arrayToString(conjuntos[1].datos) as NSString).drawInRect(rectanguloTexto, withAttributes: textFontAttributes)
+            (operacion.arrayToString(diagrama.conjuntos[1].datos) as NSString).drawInRect(rectanguloTexto, withAttributes: textFontAttributes)
             
         }
-        
+
     }
 }
 

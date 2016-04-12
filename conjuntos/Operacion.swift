@@ -10,9 +10,20 @@ import UIKit
 
 class Operacion: NSObject {
     
-//    func interseccionDos(conjuntoA: Conjunto, conjuntoB: Conjunto) -> Int {
-//        
-//    }
+    func interseccionDos(conjuntoA: Conjunto, conjuntoB: Conjunto) -> Array<Int> {
+        var intersects = [Int]()
+        
+        
+        for i in 0...(conjuntoA.datos.count - 1) {
+            for x in 0...(conjuntoB.datos.count - 1) {
+                if conjuntoA.datos[i] == conjuntoB.datos[x] && conjuntoA.datos[i] != nil {
+                    intersects.append(conjuntoA.datos[i]!)
+                }
+            }
+        }
+        
+       return intersects
+    }
     
 //    func interseccionTres(conjuntoA: Conjunto, conjuntoB: Conjunto) -> Array<Conjunto> {
 //        

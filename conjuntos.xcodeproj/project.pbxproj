@@ -14,6 +14,7 @@
 		B10225381CB033A9003DE77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10225371CB033A9003DE77A /* Assets.xcassets */; };
 		B102253B1CB033A9003DE77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10225391CB033A9003DE77A /* LaunchScreen.storyboard */; };
 		B1A250011CBCC390005469FE /* Operacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A250001CBCC390005469FE /* Operacion.swift */; };
+		B1E1F97E1CBD558100B65E7C /* Diagrama.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1F97D1CBD558100B65E7C /* Diagrama.swift */; };
 		B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */; };
 		B1FB03211CB4060F0097CD69 /* Conjunto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB03201CB4060F0097CD69 /* Conjunto.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		B102253A1CB033A9003DE77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B102253C1CB033A9003DE77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A250001CBCC390005469FE /* Operacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operacion.swift; sourceTree = "<group>"; };
+		B1E1F97D1CBD558100B65E7C /* Diagrama.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagrama.swift; sourceTree = "<group>"; };
 		B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaConjuntos.swift; sourceTree = "<group>"; };
 		B1FB03201CB4060F0097CD69 /* Conjunto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conjunto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 				B10225301CB033A9003DE77A /* FirstViewController.swift */,
 				B10225321CB033A9003DE77A /* SecondViewController.swift */,
 				B1FB03201CB4060F0097CD69 /* Conjunto.swift */,
+				B1E1F97D1CBD558100B65E7C /* Diagrama.swift */,
 				B10225341CB033A9003DE77A /* Main.storyboard */,
 				B10225371CB033A9003DE77A /* Assets.xcassets */,
 				B10225391CB033A9003DE77A /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A250011CBCC390005469FE /* Operacion.swift in Sources */,
+				B1E1F97E1CBD558100B65E7C /* Diagrama.swift in Sources */,
 				B10225331CB033A9003DE77A /* SecondViewController.swift in Sources */,
 				B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */,
 				B102252F1CB033A9003DE77A /* AppDelegate.swift in Sources */,
