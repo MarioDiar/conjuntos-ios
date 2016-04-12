@@ -9,18 +9,14 @@
 import UIKit
 
 class Conjunto: NSObject {
-    var dato1 : Int?
-    var dato2 : Int?
-    var dato3: Int?
-    var dato4: Int?
-    var dato5: Int?
+    var dato: Int? = nil
+    var datos = [Int?]()
     
     override init() {
-        dato1 = nil
-        dato2 = nil
-        dato3 = nil
-        dato4 = nil
-        dato5 = nil
+        for _ in 0...4 {
+            datos.append(dato)
+        }
+        
     }
 }
 

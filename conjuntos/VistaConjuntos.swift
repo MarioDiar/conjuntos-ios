@@ -5,11 +5,8 @@
 //  Created by Mario Díaz on 3/15/16.
 //  Copyright © 2016 Mario Díaz. All rights reserved.
 
+//TODO: Fix the view of 2 conjuntos 
 
-//TODO: PUT INVISIBLE LAYERS WHERE THE TEXT WILL GO
-//TODO: PRINT STUFF IN THE CORRECT PLACE
-//TODO: PROCESS DATA OF CONJUNTOS
-//TODO: DRAW DATA OF CONJUNTOS
 
 import UIKit
 
@@ -17,11 +14,11 @@ class VistaConjuntos: UIView {
     
     var conjuntos = [Conjunto]()
     
-    var testString = "your text"
+    var operacion = Operacion()
+    
+    var testString = ""
     
     var number = 8
-    
-    var s: NSString = "1 2 3"
     
     //Drawing function
     override func drawRect(rect: CGRect) {
@@ -127,13 +124,9 @@ class VistaConjuntos: UIView {
             //DRAWING TEXT ON CONTEXT
             let font = UIFont(name: "Helvetica Bold", size: 14.0)
             
-            let textFontAttributes : [String : AnyObject] =
-            [
-                NSFontAttributeName: font!
-            ]
+            let textFontAttributes : [String : AnyObject] = [ NSFontAttributeName: font! ]
             
-            
-            s.drawInRect(rectanguloTexto, withAttributes: textFontAttributes)
+            (operacion.arrayToString(conjuntos[1].datos) as NSString).drawInRect(rectanguloTexto, withAttributes: textFontAttributes)
             
         }
         
