@@ -42,14 +42,15 @@ class Diagrama: NSObject {
     //Function to convert Int Arrays to String
     func arrayToString(datos: Array<Int?>) -> String {
         var s = ""
-        
-        for i in 0...(datos.count - 1) {
-            if datos[i] != nil {
-                let intAux = datos[i]!
-                if i == 0 {
-                    s += String(intAux)
-                } else {
-                    s += " " + String(intAux)
+        if datos.count != 0 {
+            for i in 0...(datos.count - 1) {
+                if datos[i] != nil {
+                    let intAux = datos[i]!
+                    if i == 0 {
+                        s += String(intAux)
+                    } else {
+                        s += " " + String(intAux)
+                    }
                 }
             }
         }
@@ -109,11 +110,13 @@ class Diagrama: NSObject {
         return res
     }
     
+    //Calculates the duo intersection between 2 conjuntos excluding the elements in the triIntersection
     private func calculaDoble(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
         let inters : Array<Int?> = interseccion(elemA, elemB: elemB)
         return eliminaRepetidos(inters, repetidos: inters123)
     }
     
+    //Eliminates all elements from conjunto that intersects with any other element from other conjunto
     private func calculaSingle(elemA: Array<Int?>, repetidos1: Array<Int?>, repetidos2: Array<Int?>) -> Array<Int?> {
         var res : Array<Int?> = eliminaRepetidos(elemA, repetidos: inters123)
         res = eliminaRepetidos(res, repetidos: repetidos1)
