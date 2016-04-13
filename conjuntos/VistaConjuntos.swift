@@ -12,11 +12,8 @@ import UIKit
 
 class VistaConjuntos: UIView {
     
-    var conjuntos = [Conjunto]()
     var diagrama : Diagrama!
     var numConjuntos = 0
-    
-    var operacion = Operacion()
     
     //Drawing function
     override func drawRect(rect: CGRect) {
@@ -124,7 +121,33 @@ class VistaConjuntos: UIView {
             
             let textFontAttributes : [String : AnyObject] = [ NSFontAttributeName: font! ]
             
-            (operacion.arrayToString(diagrama.conjuntos[1].datos) as NSString).drawInRect(rectanguloTexto, withAttributes: textFontAttributes)
+            (diagrama.arrayToString(diagrama.conjuntos[1].datos) as NSString).drawInRect(rectanguloTexto, withAttributes: textFontAttributes)
+            
+            diagrama.calculaDiagrama()
+            print("DATOS CONJ 1: ")
+            print(diagrama.conjuntos[0].datos)
+            print("DATOS CONJ 2: ")
+            print(diagrama.conjuntos[1].datos)
+            print("DATOS CONJ 3: ")
+            print(diagrama.conjuntos[2].datos)
+            
+            print("||||||||||||||||||||||||||")
+            
+            print("inters 1 2")
+            print(diagrama.inters12)
+            print("inters 1 3")
+            print(diagrama.inters13)
+            print("inters 2 3")
+            print(diagrama.inters23)
+            print("inters 1 2 3")
+            print(diagrama.inters123)
+            print("conj 1")
+            print(diagrama.conj1)
+            print("conj 2")
+            print(diagrama.conj2)
+            print("conj 3")
+            print(diagrama.conj3)
+            
             
         }
 

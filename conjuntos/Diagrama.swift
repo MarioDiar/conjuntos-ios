@@ -10,6 +10,13 @@ import UIKit
 
 class Diagrama: NSObject {
     var conjuntos = [Conjunto]()
+    var inters12 = [Int?]()
+    var inters13 = [Int?]()
+    var inters23 = [Int?]()
+    var inters123 = [Int?]()
+    var conj1 = [Int?]()
+    var conj2 = [Int?]()
+    var conj3 = [Int?]()
     
     init(numConjuntos num: Int) {
         let c1 : Conjunto = Conjunto()
@@ -32,6 +39,7 @@ class Diagrama: NSObject {
         }
     }
     
+    //Function to convert Int Arrays to String
     func arrayToString(datos: Array<Int?>) -> String {
         var s = ""
         
@@ -48,24 +56,77 @@ class Diagrama: NSObject {
         return s
     }
     
-    func interseccionDos(conjuntoA: Conjunto, conjuntoB: Conjunto) -> Array<Int> {
-        var intersects = [Int]()
+    //Intersection function, it returns an array with the items that intersect
+    private func interseccion(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
+        var inters = [Int?]()
         
-        
-        for i in 0...(conjuntoA.datos.count - 1) {
-            for x in 0...(conjuntoB.datos.count - 1) {
-                if conjuntoA.datos[i] == conjuntoB.datos[x] && conjuntoA.datos[i] != nil {
-                    intersects.append(conjuntoA.datos[i]!)
+        for i in 0...(elemA.count - 1) {
+            for x in 0...(elemA.count - 1) {
+                if elemA[i] == elemB[x] && elemA[i] != nil {
+                    inters.append(elemA[i]!)
                 }
             }
         }
-        
-        return intersects
+        return inters
     }
     
-    //    func interseccionTres(conjuntoA: Conjunto, conjuntoB: Conjunto) -> Array<Conjunto> {
-    //
-    //    }
+    //Calculates all the data for the diagram depending on how many conjuntos it has
+    func calculaDiagrama() -> Void {
+        if conjuntos.count == 2 {
+            self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
+            self.conj1 = eliminaRepetidos(conjuntos[0].datos, repetidos: inters12)
+            self.conj2 = eliminaRepetidos(conjuntos[1].datos, repetidos: inters12)
+        } else {
+            self.inters123 = calculaTri()
+            self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
+            self.inters13 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[2].datos)
+            self.inters23 = calculaDoble(conjuntos[1].datos, elemB: conjuntos[2].datos)
+            self.conj1 = calculaSingle(conjuntos[0].datos, repetidos1: inters12, repetidos2: inters13)
+            self.conj2 = calculaSingle(conjuntos[1].datos, repetidos1: inters12, repetidos2: inters23)
+            self.conj3 = calculaSingle(conjuntos[2].datos, repetidos1: inters13, repetidos2: inters23)
+        }
+    }
+    
+    private func eliminaRepetidos(elemA: Array<Int?>, repetidos: Array<Int?>) -> Array<Int?> {
+        var res = [Int?]()
+        var flag = true
+        
+        if repetidos.count != 0 {
+            for i in 0...(elemA.count - 1) {
+                flag = true
+                for x in 0...(repetidos.count - 1) {
+                    if elemA[i] == repetidos[x] {
+                        flag = false
+                    }
+                }
+                if flag {
+                    res.append(elemA[i])
+                }
+            }
+        } else {
+            res = elemA
+        }
+        return res
+    }
+    
+    private func calculaDoble(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
+        let inters : Array<Int?> = interseccion(elemA, elemB: elemB)
+        return eliminaRepetidos(inters, repetidos: inters123)
+    }
+    
+    private func calculaSingle(elemA: Array<Int?>, repetidos1: Array<Int?>, repetidos2: Array<Int?>) -> Array<Int?> {
+        var res : Array<Int?> = eliminaRepetidos(elemA, repetidos: inters123)
+        res = eliminaRepetidos(res, repetidos: repetidos1)
+        return eliminaRepetidos(res, repetidos: repetidos2)
+    }
+    
+    //calculates the tri intersection and saves it in the inters123 value of the diagram
+    private func calculaTri() -> Array<Int?> {
+        let inters : Array<Int?> = interseccion(conjuntos[0].datos, elemB: conjuntos[1].datos)
+        return interseccion(inters, elemB: conjuntos[2].datos)
+        
+    }
+    
     
 }
 
