@@ -13,16 +13,17 @@ class VistaConjuntos: UIView {
     var numConjuntos = 0
     
     //Drawing function
-    override func drawRect(rect: CGRect) {
-        diagrama.calculaDiagrama()
+    override func drawRect(rect: CGRect) {        
         //Contexto donde se dibujara
         let contexto = UIGraphicsGetCurrentContext()
+        
         //Colores transparentes
         let orangeTrans = CGColorCreateCopyWithAlpha(UIColor.orangeColor().CGColor, 0.5)
         let magentaTrans = CGColorCreateCopyWithAlpha(UIColor.magentaColor().CGColor, 0.5)
         let cyanTrans = CGColorCreateCopyWithAlpha(UIColor.cyanColor().CGColor, 0.5)
         let transparent = CGColorCreateCopyWithAlpha(UIColor.clearColor().CGColor, 0.0)
         
+        //Name of conjuntos
         let nameConj1 = "A"
         let nameConj2 = "B"
         let nameConj3 = "C"
@@ -33,11 +34,6 @@ class VistaConjuntos: UIView {
         paragraphStyle.alignment = NSTextAlignment.Center
         
         let textFontAttributes : [String : AnyObject] = [ NSFontAttributeName: font!, NSParagraphStyleAttributeName: paragraphStyle ]
-
-        
-        //Capa para mostrar los elementos de los conjuntos
-        //let capaElementos = CGLayerCreateWithContext(contexto, self.frame.size, nil)
-        //let contextoElementos = CGLayerGetContext(capaElementos)
         
         //Setting linewidth and stroke color
         CGContextSetLineWidth(contexto, 1.0)
@@ -82,15 +78,15 @@ class VistaConjuntos: UIView {
             let inter = CGRectMake(117, 116, 44, 44)
             CGContextFillRect(contexto, inter)
             
+            //DRAWING DATA ON RECTANGLES
             (diagrama.arrayToString(diagrama.conj1) as NSString).drawInRect(botLeftCon, withAttributes: textFontAttributes)
             (diagrama.arrayToString(diagrama.conj2) as NSString).drawInRect(botRightConj, withAttributes: textFontAttributes)
             (diagrama.arrayToString(diagrama.inters12) as NSString).drawInRect(inter, withAttributes: textFontAttributes)
             
+            //DRAWING NAMES OF CONJUNTOS
             (nameConj1 as NSString).drawInRect(nameBotLeftConj, withAttributes: textFontAttributes)
             (nameConj2 as NSString).drawInRect(nameBotRightConj, withAttributes: textFontAttributes)
         
-            
-            
         } else if numConjuntos == 3 {
             //DRAWING ELLIPSES
             //Elipse-setting elipse stroke and fill color
@@ -171,17 +167,22 @@ class VistaConjuntos: UIView {
             (nameConj1 as NSString).drawInRect(nameTopConj, withAttributes: textFontAttributes)
             (nameConj2 as NSString).drawInRect(nameBotRightConj, withAttributes: textFontAttributes)
             (nameConj3 as NSString).drawInRect(nameBotLeftConj, withAttributes: textFontAttributes)
+        }
+    }
+}
 
-            //DEBUGGING
+
+
+//DEBUGGING
 //            print("DATOS CONJ 1: ")
 //            print(diagrama.conjuntos[0].datos)
 //            print("DATOS CONJ 2: ")
 //            print(diagrama.conjuntos[1].datos)
 //            print("DATOS CONJ 3: ")
 //            print(diagrama.conjuntos[2].datos)
-//            
+//
 //            print("||||||||||||||||||||||||||")
-//            
+//
 //            print("inters 1 2")
 //            print(diagrama.inters12)
 //            print("inters 1 3")
@@ -196,10 +197,4 @@ class VistaConjuntos: UIView {
 //            print(diagrama.conj2)
 //            print("conj 3")
 //            print(diagrama.conj3)
-            
-            
-        }
-
-    }
-}
 
