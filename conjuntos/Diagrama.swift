@@ -39,6 +39,23 @@ class Diagrama: NSObject {
         }
     }
     
+    //Calculates all the data for the diagram depending on how many conjuntos it has
+    func calculaDiagrama() -> Void {
+        if conjuntos.count == 2 {
+            self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
+            self.conj1 = eliminaRepetidos(conjuntos[0].datos, repetidos: inters12)
+            self.conj2 = eliminaRepetidos(conjuntos[1].datos, repetidos: inters12)
+        } else {
+            self.inters123 = calculaTri()
+            self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
+            self.inters13 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[2].datos)
+            self.inters23 = calculaDoble(conjuntos[1].datos, elemB: conjuntos[2].datos)
+            self.conj1 = calculaSingle(conjuntos[0].datos, repetidos1: inters12, repetidos2: inters13)
+            self.conj2 = calculaSingle(conjuntos[1].datos, repetidos1: inters12, repetidos2: inters23)
+            self.conj3 = calculaSingle(conjuntos[2].datos, repetidos1: inters13, repetidos2: inters23)
+        }
+    }
+    
     //Function to convert Int Arrays to String
     func arrayToString(datos: Array<Int?>) -> String {
         var s = ""
@@ -69,23 +86,6 @@ class Diagrama: NSObject {
             }
         }
         return inters
-    }
-    
-    //Calculates all the data for the diagram depending on how many conjuntos it has
-    func calculaDiagrama() -> Void {
-        if conjuntos.count == 2 {
-            self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
-            self.conj1 = eliminaRepetidos(conjuntos[0].datos, repetidos: inters12)
-            self.conj2 = eliminaRepetidos(conjuntos[1].datos, repetidos: inters12)
-        } else {
-            self.inters123 = calculaTri()
-            self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
-            self.inters13 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[2].datos)
-            self.inters23 = calculaDoble(conjuntos[1].datos, elemB: conjuntos[2].datos)
-            self.conj1 = calculaSingle(conjuntos[0].datos, repetidos1: inters12, repetidos2: inters13)
-            self.conj2 = calculaSingle(conjuntos[1].datos, repetidos1: inters12, repetidos2: inters23)
-            self.conj3 = calculaSingle(conjuntos[2].datos, repetidos1: inters13, repetidos2: inters23)
-        }
     }
     
     private func eliminaRepetidos(elemA: Array<Int?>, repetidos: Array<Int?>) -> Array<Int?> {
