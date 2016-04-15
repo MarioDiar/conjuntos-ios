@@ -25,8 +25,8 @@ class Diagrama: NSObject {
         
         for i in 0...4 {
             c1.datos[i] = i
-            c2.datos[i] = i+1
-            c3.datos[i] = i*2
+            c2.datos[i] = i+3
+            c3.datos[i] = i+1
         }
         
         if num == 2 {
@@ -79,8 +79,8 @@ class Diagrama: NSObject {
         var inters = [Int?]()
         
         for i in 0...(elemA.count - 1) {
-            for x in 0...(elemA.count - 1) {
-                if elemA[i] == elemB[x] && elemA[i] != nil {
+            for x in 0...(elemB.count - 1) {
+                if elemA[i] == elemB[x]{
                     inters.append(elemA[i]!)
                 }
             }
@@ -126,7 +126,7 @@ class Diagrama: NSObject {
     //calculates the tri intersection and saves it in the inters123 value of the diagram
     private func calculaTri() -> Array<Int?> {
         let inters : Array<Int?> = interseccion(conjuntos[0].datos, elemB: conjuntos[1].datos)
-        return interseccion(inters, elemB: conjuntos[2].datos)
+        return interseccion(conjuntos[2].datos, elemB: inters)
         
     }
     

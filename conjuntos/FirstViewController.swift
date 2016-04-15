@@ -27,7 +27,7 @@ class FirstViewController: UIViewController {
         }
         vistaConjuntos.diagrama.calculaDiagrama()
     }
-        
+    
     @IBAction func cambiaNumSegment(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             vistaConjuntos.numConjuntos = 3
