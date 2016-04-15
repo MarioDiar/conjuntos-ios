@@ -47,7 +47,7 @@ class VistaConjuntos: UIView {
         let negroTrans = CGColorCreateCopyWithAlpha(UIColor.orangeColor().CGColor, 0.5)
         let magentaTrans = CGColorCreateCopyWithAlpha(UIColor.magentaColor().CGColor, 0.5)
         let blancoTrans = CGColorCreateCopyWithAlpha(UIColor.cyanColor().CGColor, 0.5)
-        let negro = CGColorCreateCopyWithAlpha(UIColor.blackColor().CGColor, 0.0)
+        let transparent = CGColorCreateCopyWithAlpha(UIColor.blackColor().CGColor, 0.0)
         
         //setting font attributes
         let font = UIFont(name: "Helvetica Bold", size: 14.0)
@@ -72,7 +72,7 @@ class VistaConjuntos: UIView {
             
             CGContextSetFillColorWithColor(contexto, negroTrans)
             
-            let theRect: CGRect = CGRectMake(65, 15, 150, 150)
+            let theRect: CGRect = CGRectMake(100, 50, 150, 150)
             CGContextFillEllipseInRect(contexto, theRect)
             CGContextStrokeEllipseInRect(contexto, theRect)
             
@@ -80,11 +80,28 @@ class VistaConjuntos: UIView {
             CGContextSetFillColorWithColor(contexto, magentaTrans)
             
             //Elipse
-            let elipse: CGRect = CGRectMake(25, 85, 150, 150)
+            let elipse: CGRect = CGRectMake(25, 50, 150, 150)
             CGContextFillEllipseInRect(contexto, elipse)
             CGContextStrokeEllipseInRect(contexto, elipse)
             
             //DRAWING INVIS RECTANGLE TO DRAW TEXT ON
+            CGContextSetFillColorWithColor(contexto, transparent)
+            
+            //botright rectangulo
+            let botRightConj = CGRectMake(177, 122, 60, 50)
+            CGContextFillRect(contexto, botRightConj)
+            
+            //botleft rectangulo
+            let botLeftCon = CGRectMake(38, 120, 60, 50)
+            CGContextFillRect(contexto, botLeftCon)
+            
+            //intersection
+            let inter = CGRectMake(117, 116, 44, 44)
+            CGContextFillRect(contexto, inter)
+            
+            (diagrama.arrayToString(diagrama.conj1) as NSString).drawInRect(botLeftCon, withAttributes: textFontAttributes)
+            (diagrama.arrayToString(diagrama.conj2) as NSString).drawInRect(botRightConj, withAttributes: textFontAttributes)
+            (diagrama.arrayToString(diagrama.inters12) as NSString).drawInRect(inter, withAttributes: textFontAttributes)
         
             
             
@@ -113,13 +130,9 @@ class VistaConjuntos: UIView {
             CGContextFillEllipseInRect(contexto, elipseTwo)
             CGContextStrokeEllipseInRect(contexto, elipseTwo)
             
-            //Setting new colors to stroke and fill
-            CGContextSetFillColorWithColor(contexto, negro)
-            
-        
-            
             //DRAWING INVIS RECTANGLES AND THE DIAGRAM TEXT ABOVE IT
             //y, x
+            CGContextSetFillColorWithColor(contexto, transparent)
             
             //top rectangulo
             let topConj: CGRect = CGRectMake(115, 30, 60, 50)
@@ -158,29 +171,30 @@ class VistaConjuntos: UIView {
             (diagrama.arrayToString(diagrama.inters23) as NSString).drawInRect(interBottom, withAttributes: textFontAttributes)
             (diagrama.arrayToString(diagrama.inters123) as NSString).drawInRect(interTri, withAttributes: textFontAttributes)
 
-            print("DATOS CONJ 1: ")
-            print(diagrama.conjuntos[0].datos)
-            print("DATOS CONJ 2: ")
-            print(diagrama.conjuntos[1].datos)
-            print("DATOS CONJ 3: ")
-            print(diagrama.conjuntos[2].datos)
-            
-            print("||||||||||||||||||||||||||")
-            
-            print("inters 1 2")
-            print(diagrama.inters12)
-            print("inters 1 3")
-            print(diagrama.inters13)
-            print("inters 2 3")
-            print(diagrama.inters23)
-            print("inters 1 2 3")
-            print(diagrama.inters123)
-            print("conj 1")
-            print(diagrama.conj1)
-            print("conj 2")
-            print(diagrama.conj2)
-            print("conj 3")
-            print(diagrama.conj3)
+            //DEBUGGING
+//            print("DATOS CONJ 1: ")
+//            print(diagrama.conjuntos[0].datos)
+//            print("DATOS CONJ 2: ")
+//            print(diagrama.conjuntos[1].datos)
+//            print("DATOS CONJ 3: ")
+//            print(diagrama.conjuntos[2].datos)
+//            
+//            print("||||||||||||||||||||||||||")
+//            
+//            print("inters 1 2")
+//            print(diagrama.inters12)
+//            print("inters 1 3")
+//            print(diagrama.inters13)
+//            print("inters 2 3")
+//            print(diagrama.inters23)
+//            print("inters 1 2 3")
+//            print(diagrama.inters123)
+//            print("conj 1")
+//            print(diagrama.conj1)
+//            print("conj 2")
+//            print(diagrama.conj2)
+//            print("conj 3")
+//            print(diagrama.conj3)
             
             
         }
