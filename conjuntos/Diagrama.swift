@@ -63,10 +63,14 @@ class Diagrama: NSObject {
             for i in 0...(datos.count - 1) {
                 if datos[i] != nil {
                     let intAux = datos[i]!
-                    if i == 0 {
+                    if i == 0 && datos.count == 1 {
                         s += String(intAux)
-                    } else {
+                    } else if i == 0{
+                        s += String(intAux)+","
+                    } else if i == datos.count-1  {
                         s += " " + String(intAux)
+                    } else {
+                        s += " " + String(intAux)+","
                     }
                 }
             }
