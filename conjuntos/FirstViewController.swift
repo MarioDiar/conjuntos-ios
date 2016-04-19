@@ -9,8 +9,18 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    @IBOutlet weak var ALabel: UILabel!
+    @IBOutlet weak var BLabel: UILabel!
+    @IBOutlet weak var CLabel: UILabel!
+    
+    @IBOutlet weak var rightOneLabel: UILabel!
+    @IBOutlet weak var rightTwoLabel: UILabel!
+    @IBOutlet weak var rightThreeLabel: UILabel!
+    @IBOutlet weak var rightFourLabel: UILabel!
+    
+    
 
-    @IBOutlet weak var conjuntosTextview: UITextView!
     @IBOutlet weak var vistaConjuntos: VistaConjuntos!
     @IBOutlet weak var numConjuntosSegment: UISegmentedControl!
     @IBOutlet weak var unionInterSegment: UISegmentedControl!
@@ -39,6 +49,7 @@ class FirstViewController: UIViewController {
         vistaConjuntos.diagrama.calculaDiagrama()
         vistaConjuntos.setNeedsDisplay()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
