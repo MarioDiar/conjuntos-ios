@@ -44,6 +44,9 @@
                                     <segment title="Interseccion"/>
                                 </segments>
                                 <color key="tintColor" red="0.90959535256410251" green="0.90959535256410251" blue="0.90959535256410251" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cambiaOperacion:" destination="9pv-A4-QxB" eventType="valueChanged" id="hTS-oK-QbF"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A∩B = {1,2,3,6}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-oo-4vM">
                                 <rect key="frame" x="156" y="118" width="144" height="21"/>

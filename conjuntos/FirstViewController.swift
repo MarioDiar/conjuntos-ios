@@ -56,6 +56,10 @@ class FirstViewController: UIViewController {
         vistaConjuntos.setNeedsDisplay()
     }
     
+    @IBAction func cambiaOperacion(sender: UISegmentedControl) {
+        setLabels(numConjuntosSegment.selectedSegmentIndex, tipo: unionInterSegment.selectedSegmentIndex)
+    }
+    
     //Funcion que despliega los elementos del conjuntos y su interseccion/union en formato de texto
     func setLabels(num: Int, tipo: Int) {
         if num == 0 && tipo == 0 {
@@ -76,6 +80,15 @@ class FirstViewController: UIViewController {
             rightTwoLabel.text = "A∩B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
             rightThreeLabel.text = "B∩A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
             rightFourLabel.text = ""
+        } else if num == 0 && tipo == 1 {
+            ALabel.text = "A = {" + "}"
+            BLabel.text = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
+            CLabel.text = "C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[2].datos) + "}"
+            
+        } else if num == 1 && tipo == 1 {
+            ALabel.text = "A = {"+"}"
+            BLabel.text = ""
+            CLabel.text = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
         }
         
     }
