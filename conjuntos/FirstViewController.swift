@@ -1,10 +1,8 @@
-//
-//  FirstViewController.swift
-//  conjuntos
-//
-//  Created by Mario Díaz on 4/2/16.
-//  Copyright © 2016 Mario Díaz. All rights reserved.
-//
+/*
+* Clase FirstViewController. Creada por Mario Diaz 12/04/2016
+*
+* Controlador para la pantalla de pruebas.
+*/
 
 import UIKit
 
@@ -25,6 +23,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var numConjuntosSegment: UISegmentedControl!
     @IBOutlet weak var unionInterSegment: UISegmentedControl!
     
+    //Funcion que carga el diagrama en la aplicacion cada que se carga esta vista
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +41,8 @@ class FirstViewController: UIViewController {
         
     }
     
+    //Funcion que detecta cuando se cambian el numero de conjuntos y vuelve a cargar el diagrama dependiendo el num. de conjuntos
+    //que pide el usuario
     @IBAction func cambiaNumSegment(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             vistaConjuntos.numConjuntos = 3
@@ -55,6 +56,7 @@ class FirstViewController: UIViewController {
         vistaConjuntos.setNeedsDisplay()
     }
     
+    //Funcion que despliega los elementos del conjuntos y su interseccion/union en formato de texto
     func setLabels(num: Int, tipo: Int) {
         if num == 0 && tipo == 0 {
             ALabel.text = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
@@ -74,8 +76,6 @@ class FirstViewController: UIViewController {
             rightTwoLabel.text = "A∩B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
             rightThreeLabel.text = "B∩A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
             rightFourLabel.text = ""
-            
-            
         }
         
     }

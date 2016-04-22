@@ -1,11 +1,10 @@
-//
-//  Diagrama.swift
-//  conjuntos
-//
-//  Created by Mario Díaz on 4/12/16.
-//  Copyright © 2016 Mario Díaz. All rights reserved.
-//
 
+/*
+ * Clase Diagrama. Creada por Mario Diaz 12/04/2016
+ * Esta clase representa el diagama de Venn que se despliega en la aplicacion.
+ * Genera un diagrama de manera aleatoria al momento de inicializar.
+ * Realiza todos los calculos necesarios para que sea representado de manera correcta en el diagrama de Venn.
+ */
 import UIKit
 
 class Diagrama: NSObject {
@@ -39,7 +38,7 @@ class Diagrama: NSObject {
         }
     }
     
-    //Calculates all the data for the diagram depending on how many conjuntos it has
+    //Calcula todos los datos para el diagrama dependiendo cuantos conjuntos tiene
     func calculaDiagrama() -> Void {
         if conjuntos.count == 2 {
             self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
@@ -56,7 +55,7 @@ class Diagrama: NSObject {
         }
     }
     
-    //Function to convert Int Arrays to String
+    //Funcion que convierte un array de enteros opcionales a un string
     func arrayToString(datos: Array<Int?>) -> String {
         var s = ""
         if datos.count != 0 {
@@ -78,7 +77,7 @@ class Diagrama: NSObject {
         return s
     }
     
-    //Intersection function, it returns an array with the items that intersect
+    //Funcion de interseccion, regresa un arreglo con los items que intersectan entre dos conjuntos
     private func interseccion(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
         var inters = [Int?]()
         
@@ -92,6 +91,8 @@ class Diagrama: NSObject {
         return inters
     }
     
+    //Elimina elementos repetidos de un arreglo, esto para poder hacer los calculos de las intersecciones en el diagrama
+    //sin que aparezcan repetidos
     private func eliminaRepetidos(elemA: Array<Int?>, repetidos: Array<Int?>) -> Array<Int?> {
         var res = [Int?]()
         var flag = true
@@ -114,20 +115,21 @@ class Diagrama: NSObject {
         return res
     }
     
-    //Calculates the duo intersection between 2 conjuntos excluding the elements in the triIntersection
+    //Calcula los la interseccion entre dos conjuntos que aparecera en el diagrama,
+    //eliminando los repetidos que aparecen en la interseccion triple
     private func calculaDoble(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
         let inters : Array<Int?> = interseccion(elemA, elemB: elemB)
         return eliminaRepetidos(inters, repetidos: inters123)
     }
     
-    //Eliminates all elements from conjunto that intersects with any other element from other conjunto
+    //Calcula los valores de un conjunto que no intersecta con ningun otro
     private func calculaSingle(elemA: Array<Int?>, repetidos1: Array<Int?>, repetidos2: Array<Int?>) -> Array<Int?> {
         var res : Array<Int?> = eliminaRepetidos(elemA, repetidos: inters123)
         res = eliminaRepetidos(res, repetidos: repetidos1)
         return eliminaRepetidos(res, repetidos: repetidos2)
     }
     
-    //calculates the tri intersection and saves it in the inters123 value of the diagram
+    //Calcula los valores de los conjuntos que intersectan con todos
     private func calculaTri() -> Array<Int?> {
         let inters : Array<Int?> = interseccion(conjuntos[0].datos, elemB: conjuntos[1].datos)
         return interseccion(conjuntos[2].datos, elemB: inters)

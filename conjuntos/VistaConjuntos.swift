@@ -1,9 +1,7 @@
-//
-//  VistaDibujos.swift
-//  quartz
-//
-//  Created by Mario Díaz on 3/15/16.
-//  Copyright © 2016 Mario Díaz. All rights reserved.
+/*
+* Clase VistaConjuntos. Creada por Mario Diaz 12/04/2016
+* Esta clase dibuja el diagrama de venn dependiendo los parametros que se mandan del ViewController.
+*/
 
 import UIKit
 
@@ -12,7 +10,7 @@ class VistaConjuntos: UIView {
     var diagrama : Diagrama!
     var numConjuntos = 0
     
-    //Drawing function
+    //Funcion que dibuja el diagrama de venn
     override func drawRect(rect: CGRect) {        
         //Contexto donde se dibujara
         let contexto = UIGraphicsGetCurrentContext()
@@ -23,26 +21,27 @@ class VistaConjuntos: UIView {
         let cyanTrans = CGColorCreateCopyWithAlpha(UIColor.cyanColor().CGColor, 0.5)
         let transparent = CGColorCreateCopyWithAlpha(UIColor.clearColor().CGColor, 0.0)
         
-        //Name of conjuntos
+        //Nombre de los conjuntos
         let nameConj1 = "A"
         let nameConj2 = "B"
         let nameConj3 = "C"
         
-        //setting font attributes
+        //Definiendo el font que se utilizara para escribir en el diagrama de venn
         let font = UIFont(name: "Helvetica Bold", size: 14.0)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = NSTextAlignment.Center
         
         let textFontAttributes : [String : AnyObject] = [ NSFontAttributeName: font!, NSParagraphStyleAttributeName: paragraphStyle ]
         
-        //Setting linewidth and stroke color
+        //Definiendo el ancho de la linea
         CGContextSetLineWidth(contexto, 1.0)
         CGContextSetStrokeColorWithColor(contexto, UIColor.blackColor().CGColor)
 
+        
+        //Checando cuantos conjuntos hay en el diagrama, para dibujar el diagrama acorde a esto.
         if numConjuntos == 2 {
-            //DRAWING ELLIPSES
-            //Elipse-setting elipse stroke and fill color
-            
+            //Dibujando las elipses cuando el diagrama tiene dos conjuntos
+            //DIBUJANDO ELIPSES
             CGContextSetFillColorWithColor(contexto, cyanTrans)
             
             let theRect: CGRect = CGRectMake(100, 50, 150, 150)
@@ -88,7 +87,9 @@ class VistaConjuntos: UIView {
             (nameConj2 as NSString).drawInRect(nameBotRightConj, withAttributes: textFontAttributes)
         
         } else if numConjuntos == 3 {
-            //DRAWING ELLIPSES
+            //Dibujando las elipses cuando el diagrama tiene dos conjuntos
+            
+            //DIBUJANDO ELIPSES
             //Elipse-setting elipse stroke and fill color
             CGContextSetFillColorWithColor(contexto, orangeTrans)
             
@@ -112,7 +113,7 @@ class VistaConjuntos: UIView {
             CGContextFillEllipseInRect(contexto, elipseTwo)
             CGContextStrokeEllipseInRect(contexto, elipseTwo)
             
-            //DRAWING INVIS RECTANGLES AND THE DIAGRAM TEXT ABOVE IT
+            //DIBUJANDO RECTANGULOS INVISIBLES EN LAS INTERSECCIONES, PARA ESCRIBIR TEXTO EN ELLOS
             //y, x
             CGContextSetFillColorWithColor(contexto, transparent)
             
@@ -153,8 +154,7 @@ class VistaConjuntos: UIView {
             let interTri = CGRectMake(117, 116, 44, 44)
             CGContextFillRect(contexto, interTri)
             
-            
-            //DRAWING DATA ON RECTANGLES
+            //DIBUJANDO LOS DATOS DEL DIAGRAMA EN LOS RECTANGULOS INVISIBLES
             (diagrama.arrayToString(diagrama.conj1) as NSString).drawInRect(topConj, withAttributes: textFontAttributes)
             (diagrama.arrayToString(diagrama.conj2) as NSString).drawInRect(botRightConj, withAttributes: textFontAttributes)
             (diagrama.arrayToString(diagrama.conj3) as NSString).drawInRect(botLeftConj, withAttributes: textFontAttributes)
@@ -163,7 +163,7 @@ class VistaConjuntos: UIView {
             (diagrama.arrayToString(diagrama.inters23) as NSString).drawInRect(interBottom, withAttributes: textFontAttributes)
             (diagrama.arrayToString(diagrama.inters123) as NSString).drawInRect(interTri, withAttributes: textFontAttributes)
             
-            //DRAWING NAMES ON CONJUNTOS
+            //DIBUJANDO LOS NOMBRES DE CADA CONJUNTO
             (nameConj1 as NSString).drawInRect(nameTopConj, withAttributes: textFontAttributes)
             (nameConj2 as NSString).drawInRect(nameBotRightConj, withAttributes: textFontAttributes)
             (nameConj3 as NSString).drawInRect(nameBotLeftConj, withAttributes: textFontAttributes)
