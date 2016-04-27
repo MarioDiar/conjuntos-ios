@@ -9,6 +9,14 @@ import UIKit
 class FirstViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var AButtonLabel: UIButton!
+    @IBOutlet weak var BButtonLabel: UIButton!
+    @IBOutlet weak var CButtonLabel: UIButton!
+    
+    @IBOutlet weak var RightOneButtonLabel: UIButton!
+    @IBOutlet weak var RightTwoButtonLabel: UIButton!
+    @IBOutlet weak var RightThreeButtonLabel: UIButton!
+    @IBOutlet weak var RightFourButtonLabel: UIButton!
+    
     
     @IBOutlet weak var ALabel: UILabel!
     @IBOutlet weak var BLabel: UILabel!
@@ -65,35 +73,74 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     func setLabels(num: Int, tipo: Int) {
         if num == 0 && tipo == 0 {
             
-            let stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
+            var stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
             AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
             
-            ALabel.text = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
-            BLabel.text = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
-            CLabel.text = "C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[2].datos) + "}"
+            stringTemp = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
+            BButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
             
-            rightOneLabel.text = "A∩B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
-            rightTwoLabel.text = "A∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters13) + "}"
-            rightThreeLabel.text = "B∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters23) + "}"
-            rightFourLabel.text = "A∩B∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123) + "}"
+            
+            stringTemp = "C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[2].datos) + "}"
+            CButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = "A∩B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
+            RightOneButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = "A∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters13) + "}"
+            RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = "B∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters23) + "}"
+            RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "A∩B∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123) + "}"
+            RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
         } else if num == 1 && tipo == 0 {
-            ALabel.text = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
-            BLabel.text = ""
-            CLabel.text = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
+            var stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
+            AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
             
-            rightOneLabel.text = ""
-            rightTwoLabel.text = "A∩B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
-            rightThreeLabel.text = "B∩A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
-            rightFourLabel.text = ""
+            stringTemp = " "
+            BButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
+            CButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = " "
+            RightOneButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "A∩B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
+            RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = "B∩A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
+            RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = " "
+            RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
         } else if num == 0 && tipo == 1 {
-            ALabel.text = "A = {" + "}"
-            BLabel.text = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
-            CLabel.text = "C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[2].datos) + "}"
+            var stringTemp = "A = {" + "}"
+            AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
+            BButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[2].datos) + "}"
+            CButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
             
         } else if num == 1 && tipo == 1 {
-            ALabel.text = "A = {"+"}"
-            BLabel.text = ""
-            CLabel.text = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
+            var stringTemp = "A = {"+"}"
+            AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = " "
+            BButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
+            CButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
         }
         
     }
