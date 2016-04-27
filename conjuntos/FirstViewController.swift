@@ -6,7 +6,9 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    
+    @IBOutlet weak var AButtonLabel: UIButton!
     
     @IBOutlet weak var ALabel: UILabel!
     @IBOutlet weak var BLabel: UILabel!
@@ -18,7 +20,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var rightFourLabel: UILabel!
     
     
-
     @IBOutlet weak var vistaConjuntos: VistaConjuntos!
     @IBOutlet weak var numConjuntosSegment: UISegmentedControl!
     @IBOutlet weak var unionInterSegment: UISegmentedControl!
@@ -63,6 +64,10 @@ class FirstViewController: UIViewController {
     //Funcion que despliega los elementos del conjuntos y su interseccion/union en formato de texto
     func setLabels(num: Int, tipo: Int) {
         if num == 0 && tipo == 0 {
+            
+            let stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
+            AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
             ALabel.text = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
             BLabel.text = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
             CLabel.text = "C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[2].datos) + "}"
@@ -93,10 +98,22 @@ class FirstViewController: UIViewController {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let popoverViewController = segue.destinationViewController as! PopoverController
+        popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+        popoverViewController.popoverPresentationController!.delegate = self
+    }
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //Popover function
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
     }
 
 
