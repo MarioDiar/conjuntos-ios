@@ -15,10 +15,12 @@ class VistaConjuntos: UIView {
         //Contexto donde se dibujara
         let contexto = UIGraphicsGetCurrentContext()
         
+        
+        
         //Colores transparentes
-        let orangeTrans = CGColorCreateCopyWithAlpha(UIColor.orangeColor().CGColor, 0.5)
-        let magentaTrans = CGColorCreateCopyWithAlpha(UIColor.magentaColor().CGColor, 0.5)
-        let cyanTrans = CGColorCreateCopyWithAlpha(UIColor.cyanColor().CGColor, 0.5)
+        let orangeTrans = CGColorCreateCopyWithAlpha(UIColor.orangeColor().CGColor, 0.2)
+        let magentaTrans = CGColorCreateCopyWithAlpha(UIColor.redColor().CGColor, 0.3)
+        let cyanTrans = CGColorCreateCopyWithAlpha(UIColor.cyanColor().CGColor, 0.2)
         let transparent = CGColorCreateCopyWithAlpha(UIColor.clearColor().CGColor, 0.0)
         
         //Nombre de los conjuntos

@@ -22,6 +22,19 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
+                                <rect key="frame" x="137" y="470" width="47" height="29"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="3"/>
+                                    <segment title="2"/>
+                                </segments>
+                                <color key="tintColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
+                                </connections>
+                            </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
                                 <rect key="frame" x="71" y="513" width="179" height="29"/>
                                 <animations/>
@@ -35,20 +48,13 @@
                                     <action selector="cambiaOperacion:" destination="9pv-A4-QxB" eventType="valueChanged" id="hTS-oK-QbF"/>
                                 </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
-                                <rect key="frame" x="52" y="20" width="243" height="62"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.20605125195405341" green="0.20936214247140181" blue="0.2136017628205128" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-At-vup">
                                 <rect key="frame" x="20" y="93" width="117" height="35"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="Wt3-is-jwH" kind="popoverPresentation" popoverAnchorView="eZg-At-vup" id="TXv-ZI-9hz">
@@ -62,12 +68,15 @@
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <size key="titleShadowOffset" width="11" height="10"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.14038399815962441" green="0.17971616897372036" blue="0.20784313725490178" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHO-9d-tsk">
                                 <rect key="frame" x="137" y="173" width="163" height="27"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
@@ -109,19 +118,14 @@
                                 <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="137" y="470" width="47" height="29"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
+                                <rect key="frame" x="39" y="23" width="243" height="62"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="3"/>
-                                    <segment title="2"/>
-                                </segments>
-                                <color key="tintColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
-                                </connections>
-                            </segmentedControl>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>

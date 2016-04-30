@@ -91,13 +91,15 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             
             stringTemp = "A∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters13) + "}"
             RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
-            
+            RightTwoButtonLabel.backgroundColor = UIColor(red: 158/255, green: 174/255, blue: 179/255, alpha: 1)
             
             stringTemp = "B∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters23) + "}"
             RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightThreeButtonLabel.backgroundColor = UIColor(red: 158/255, green: 174/255, blue: 179/255, alpha: 1)
             
             stringTemp = "A∩B∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123) + "}"
             RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightFourButtonLabel.backgroundColor = UIColor(red: 73/255, green: 123/255, blue: 111/255, alpha: 1)
         //2 conjuntos y tipo interseccion
         } else if num == 1 && tipo == 0 {
             var stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
@@ -115,16 +117,20 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             
             stringTemp = "A∩B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
             RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightTwoButtonLabel.backgroundColor = UIColor(red: 73/255, green: 123/255, blue: 111/255, alpha: 1)
             
             
             stringTemp = "B∩A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12) + "}"
             RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightThreeButtonLabel.backgroundColor = UIColor(red: 73/255, green: 123/255, blue: 111/255, alpha: 1)
             
             stringTemp = " "
             RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightFourButtonLabel.backgroundColor = UIColor(red: 158/255, green: 174/255, blue: 179/255, alpha: 1)
+            
         //3 conjuntos y union
         } else if num == 0 && tipo == 1 {
-            var stringTemp = "A = {" + "}"
+            var stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
             AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
             
             stringTemp = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
@@ -139,16 +145,18 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             
             stringTemp = "AuC = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union13) + "}"
             RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
-            
+            RightTwoButtonLabel.backgroundColor = UIColor(red: 158/255, green: 174/255, blue: 179/255, alpha: 1)
             
             stringTemp = "BuC = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union23) + "}"
             RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightThreeButtonLabel.backgroundColor = UIColor(red: 158/255, green: 174/255, blue: 179/255, alpha: 1)
             
             stringTemp = "AuBuC = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union123) + "}"
             RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightFourButtonLabel.backgroundColor = UIColor(red: 73/255, green: 123/255, blue: 111/255, alpha: 1)
         //2 conjuntos y union
         } else if num == 1 && tipo == 1 {
-            var stringTemp = "A = {"+"}"
+            var stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
             AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
             
             stringTemp = " "
@@ -162,13 +170,16 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             
             stringTemp = "AuB = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12) + "}"
             RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightTwoButtonLabel.backgroundColor = UIColor(red: 73/255, green: 123/255, blue: 111/255, alpha: 1)
             
             
             stringTemp = "BuA = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12) + "}"
             RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightThreeButtonLabel.backgroundColor = UIColor(red: 73/255, green: 123/255, blue: 111/255, alpha: 1)
             
             stringTemp = " "
             RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            RightFourButtonLabel.backgroundColor = UIColor(red: 158/255, green: 174/255, blue: 179/255, alpha: 1)
         }
         
     }
