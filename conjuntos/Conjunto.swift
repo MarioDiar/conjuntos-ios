@@ -10,7 +10,7 @@ class Conjunto: NSObject {
     var datos = [Int?]()
     
     override init() {
-        for _ in 0...4 {
+        for _ in 0...3 {
             datos.append(dato)
         }
         

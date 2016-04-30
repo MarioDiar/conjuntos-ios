@@ -26,7 +26,7 @@ class Diagrama: NSObject {
         let c2 : Conjunto = Conjunto()
         let c3 : Conjunto = Conjunto()
         
-        for i in 0...4 {
+        for i in 0...3 {
             c1.datos[i] = i
             c2.datos[i] = i+3
             c3.datos[i] = i+1

@@ -6,7 +6,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class FirstViewController: UIViewController, UIPopoverPresentationControllerDelegate, CambiaElementosDelegate {
     
     @IBOutlet weak var AButtonLabel: UIButton!
     @IBOutlet weak var BButtonLabel: UIButton!
@@ -16,17 +16,6 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     @IBOutlet weak var RightTwoButtonLabel: UIButton!
     @IBOutlet weak var RightThreeButtonLabel: UIButton!
     @IBOutlet weak var RightFourButtonLabel: UIButton!
-    
-    
-    @IBOutlet weak var ALabel: UILabel!
-    @IBOutlet weak var BLabel: UILabel!
-    @IBOutlet weak var CLabel: UILabel!
-    
-    @IBOutlet weak var rightOneLabel: UILabel!
-    @IBOutlet weak var rightTwoLabel: UILabel!
-    @IBOutlet weak var rightThreeLabel: UILabel!
-    @IBOutlet weak var rightFourLabel: UILabel!
-    
     
     @IBOutlet weak var vistaConjuntos: VistaConjuntos!
     @IBOutlet weak var numConjuntosSegment: UISegmentedControl!
@@ -65,9 +54,11 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         vistaConjuntos.setNeedsDisplay()
     }
     
+    
     @IBAction func cambiaOperacion(sender: UISegmentedControl) {
         setLabels(numConjuntosSegment.selectedSegmentIndex, tipo: unionInterSegment.selectedSegmentIndex)
     }
+    
     
     //Funcion que despliega los elementos del conjuntos y su interseccion/union en formato de texto
     func setLabels(num: Int, tipo: Int) {
@@ -188,6 +179,35 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         let popoverViewController = segue.destinationViewController as! PopoverController
         popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
         popoverViewController.popoverPresentationController!.delegate = self
+        popoverViewController.cambiaElementosDelegate = self
+        
+        if segue.identifier == "a" {
+            popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[0].datos.count
+            
+            popoverViewController.numDeConjunto = 0
+            
+        } else if segue.identifier == "b" {
+            popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[1].datos.count
+            popoverViewController.numDeConjunto = 1
+            
+        } else if segue.identifier == "c" {
+            popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[2].datos.count
+            popoverViewController.numDeConjunto = 2
+            
+        }
+    }
+    
+    func cambiaElementos(num: Int, conj: Int) {
+        var datos = [Int?]()
+        
+        for i in 0...num {
+            datos.append(i)
+        }
+        
+        vistaConjuntos.diagrama.conjuntos[conj].datos = datos
+        vistaConjuntos.diagrama.calculaDiagrama()
+        setLabels(numConjuntosSegment.selectedSegmentIndex, tipo: unionInterSegment.selectedSegmentIndex)
+        vistaConjuntos.setNeedsDisplay()
     }
 
     
