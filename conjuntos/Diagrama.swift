@@ -13,6 +13,10 @@ class Diagrama: NSObject {
     var inters13 = [Int?]()
     var inters23 = [Int?]()
     var inters123 = [Int?]()
+    var union12 = [Int?]()
+    var union13 = [Int?]()
+    var union23 = [Int?]()
+    var union123 = [Int?]()
     var conj1 = [Int?]()
     var conj2 = [Int?]()
     var conj3 = [Int?]()
@@ -44,6 +48,7 @@ class Diagrama: NSObject {
             self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
             self.conj1 = eliminaRepetidos(conjuntos[0].datos, repetidos: inters12)
             self.conj2 = eliminaRepetidos(conjuntos[1].datos, repetidos: inters12)
+            self.union12 = calculaUnion(conjuntos[0].datos, elemB: conjuntos[1].datos)
         } else {
             self.inters123 = calculaTri()
             self.inters12 = calculaDoble(conjuntos[0].datos, elemB: conjuntos[1].datos)
@@ -52,6 +57,10 @@ class Diagrama: NSObject {
             self.conj1 = calculaSingle(conjuntos[0].datos, repetidos1: inters12, repetidos2: inters13)
             self.conj2 = calculaSingle(conjuntos[1].datos, repetidos1: inters12, repetidos2: inters23)
             self.conj3 = calculaSingle(conjuntos[2].datos, repetidos1: inters13, repetidos2: inters23)
+            self.union12 = calculaUnion(conjuntos[0].datos, elemB: conjuntos[1].datos)
+            self.union13 = calculaUnion(conjuntos[0].datos, elemB: conjuntos[2].datos)
+            self.union23 = calculaUnion(conjuntos[1].datos, elemB: conjuntos[2].datos)
+            self.union123 = calculaUnion(union12, elemB: conj3)
         }
     }
     
@@ -80,14 +89,16 @@ class Diagrama: NSObject {
     //Funcion de interseccion, regresa un arreglo con los items que intersectan entre dos conjuntos
     private func interseccion(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
         var inters = [Int?]()
-        
-        for i in 0...(elemA.count - 1) {
-            for x in 0...(elemB.count - 1) {
-                if elemA[i] == elemB[x]{
-                    inters.append(elemA[i]!)
+        if(elemA.count != 0 && elemB.count != 0) {
+            for i in 0...(elemA.count - 1) {
+                for x in 0...(elemB.count - 1) {
+                    if elemA[i] == elemB[x]{
+                        inters.append(elemA[i]!)
+                    }
                 }
             }
         }
+        
         return inters
     }
     
@@ -134,6 +145,18 @@ class Diagrama: NSObject {
         let inters : Array<Int?> = interseccion(conjuntos[0].datos, elemB: conjuntos[1].datos)
         return interseccion(conjuntos[2].datos, elemB: inters)
         
+    }
+    
+    //Calcula la union entre dos conjuntos dados
+    private func calculaUnion(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
+        let inters : Array<Int?> = interseccion(elemA, elemB: elemB)
+        
+        return elemA + eliminaRepetidos(elemB, repetidos: inters)
+    }
+    
+    //Calcula la union entre dos conjuntos dados
+    private func calculaUnionTriple(elemA: Array<Int?>, elemB: Array<Int?>) -> Array<Int?> {
+        return elemA + elemB
     }
     
     

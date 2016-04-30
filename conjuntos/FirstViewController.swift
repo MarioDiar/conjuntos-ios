@@ -71,6 +71,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     
     //Funcion que despliega los elementos del conjuntos y su interseccion/union en formato de texto
     func setLabels(num: Int, tipo: Int) {
+        //3 conjuntos y tipo interseccion
         if num == 0 && tipo == 0 {
             
             var stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
@@ -97,7 +98,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             
             stringTemp = "A∩B∩C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123) + "}"
             RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
-            
+        //2 conjuntos y tipo interseccion
         } else if num == 1 && tipo == 0 {
             var stringTemp = "A = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[0].datos) + "}"
             AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
@@ -121,7 +122,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             
             stringTemp = " "
             RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
-            
+        //3 conjuntos y union
         } else if num == 0 && tipo == 1 {
             var stringTemp = "A = {" + "}"
             AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
@@ -132,6 +133,20 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             stringTemp = "C = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[2].datos) + "}"
             CButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
             
+            stringTemp = "AuB = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12) + "}"
+            RightOneButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = "AuC = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union13) + "}"
+            RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = "BuC = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union23) + "}"
+            RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "AuBuC = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union123) + "}"
+            RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+        //2 conjuntos y union
         } else if num == 1 && tipo == 1 {
             var stringTemp = "A = {"+"}"
             AButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
@@ -141,6 +156,19 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             
             stringTemp = "B = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.conjuntos[1].datos) + "}"
             CButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = " "
+            RightOneButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = "AuB = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12) + "}"
+            RightTwoButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            
+            stringTemp = "BuA = {" + vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12) + "}"
+            RightThreeButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
+            
+            stringTemp = " "
+            RightFourButtonLabel.setAttributedTitle(NSAttributedString(string: stringTemp), forState: UIControlState.Normal)
         }
         
     }

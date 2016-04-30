@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -20,96 +20,35 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOt-E1-6F2" customClass="VistaConjuntos" customModule="conjuntos" customModuleProvider="target">
                                 <rect key="frame" x="20" y="200" width="280" height="248"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.98519692985333662" blue="0.75023340240382497" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="137" y="454" width="47" height="29"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.43529411764705883" green="0.11764705882352941" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="3"/>
-                                    <segment title="2"/>
-                                </segments>
-                                <color key="tintColor" red="0.9738546380090497" green="0.9738546380090497" blue="0.9738546380090497" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
-                                </connections>
-                            </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
-                                <rect key="frame" x="71" y="485" width="179" height="29"/>
+                                <rect key="frame" x="71" y="513" width="179" height="29"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.43529411764705883" green="0.11764705882352941" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
-                                    <segment title="Union"/>
-                                    <segment title="Interseccion"/>
+                                    <segment title="Intersección"/>
+                                    <segment title="Unión"/>
                                 </segments>
-                                <color key="tintColor" red="0.90959535256410251" green="0.90959535256410251" blue="0.90959535256410251" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="cambiaOperacion:" destination="9pv-A4-QxB" eventType="valueChanged" id="hTS-oK-QbF"/>
                                 </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Edita los conjuntos y estudia su comportamiento, cuando estes listo haz un quiz!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
-                                <rect key="frame" x="39" y="20" width="243" height="62"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
+                                <rect key="frame" x="52" y="20" width="243" height="62"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.97237221730033674" green="0.98912582684611061" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.20605125195405341" green="0.20936214247140181" blue="0.2136017628205128" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e2-Ah-mXz">
-                                <rect key="frame" x="20" y="163" width="137" height="37"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-4I-5eq">
-                                <rect key="frame" x="20" y="128" width="137" height="36"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHO-9d-tsk">
-                                <rect key="frame" x="156" y="173" width="144" height="27"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flz-Gn-KwA">
-                                <rect key="frame" x="156" y="146" width="144" height="27"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omM-Ed-oXX">
-                                <rect key="frame" x="156" y="119" width="144" height="27"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qw-Iw-EYR">
-                                <rect key="frame" x="156" y="93" width="144" height="27"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-At-vup">
-                                <rect key="frame" x="20" y="93" width="137" height="35"/>
+                                <rect key="frame" x="20" y="93" width="117" height="35"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.97138715757622274" green="1" blue="0.97947148207819157" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="Wt3-is-jwH" kind="popoverPresentation" popoverAnchorView="eZg-At-vup" id="TXv-ZI-9hz">
@@ -117,11 +56,78 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e2-Ah-mXz">
+                                <rect key="frame" x="20" y="163" width="117" height="37"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHO-9d-tsk">
+                                <rect key="frame" x="137" y="173" width="163" height="27"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flz-Gn-KwA">
+                                <rect key="frame" x="137" y="146" width="163" height="27"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omM-Ed-oXX">
+                                <rect key="frame" x="137" y="119" width="163" height="27"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qw-Iw-EYR">
+                                <rect key="frame" x="137" y="93" width="163" height="27"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Wt3-is-jwH" kind="popoverPresentation" popoverAnchorView="1Qw-Iw-EYR" id="yhD-gr-nEn">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-4I-5eq">
+                                <rect key="frame" x="20" y="128" width="117" height="36"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
+                                <rect key="frame" x="137" y="470" width="47" height="29"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="3"/>
+                                    <segment title="2"/>
+                                </segments>
+                                <color key="tintColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.21428403092006032" green="0.21428403092006032" blue="0.21428403092006032" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="AButtonLabel" destination="eZg-At-vup" id="7ps-zc-ueY"/>
                         <outlet property="BButtonLabel" destination="K5B-4I-5eq" id="d80-69-PGS"/>
@@ -148,11 +154,11 @@
                         <viewControllerLayoutGuide type="bottom" id="PAU-2H-CAb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fya-hW-FOd">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-4Q-lJC">
-                                <rect key="frame" x="47" y="62" width="56" height="30"/>
+                                <rect key="frame" x="47" y="100" width="56" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Guardar"/>
                                 <connections>
@@ -161,114 +167,22 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="150" height="300"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="150" height="150"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="150" height="300"/>
+                    <size key="freeformSize" width="150" height="150"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nk4-UT-lGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="-407"/>
-        </scene>
-        <!--Second-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="conjuntos" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MJ0-BU-k9y">
-                                <rect key="frame" x="71" y="485" width="179" height="29"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="Union"/>
-                                    <segment title="Interseccion"/>
-                                </segments>
-                                <color key="tintColor" red="0.90959535260000002" green="0.90959535260000002" blue="0.90959535260000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YTc-3Y-Pee">
-                                <rect key="frame" x="137" y="452" width="47" height="29"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="3"/>
-                                    <segment title="2"/>
-                                </segments>
-                                <color key="tintColor" red="0.97385463800000005" green="0.97385463800000005" blue="0.97385463800000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="¿ La interseccion AuB es {1,2,4} ?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bjE-j5-1Cn">
-                                <rect key="frame" x="39" y="48" width="243" height="65"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.97237221730000001" green="0.98912582680000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYH-NV-uxw" customClass="VistaConjuntos" customModule="conjuntos" customModuleProvider="target">
-                                <rect key="frame" x="20" y="196" width="280" height="248"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.98519692989999996" blue="0.75023340240000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Kf-np-J4c">
-                                <rect key="frame" x="20" y="131" width="280" height="65"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.41288060897435896" green="0.41288060897435896" blue="0.41288060897435896" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
-                    <connections>
-                        <outlet property="numConjuntosSegment" destination="YTc-3Y-Pee" id="P6z-ix-AdD"/>
-                        <outlet property="preguntaLabel" destination="bjE-j5-1Cn" id="oqD-rh-tmh"/>
-                        <outlet property="preguntaTextview" destination="bjE-j5-1Cn" id="VHu-xr-fb0"/>
-                        <outlet property="unionInterSegment" destination="MJ0-BU-k9y" id="fVA-Dk-X0D"/>
-                        <outlet property="vistaConjuntos" destination="aYH-NV-uxw" id="2Y9-Qd-cIF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="73" y="485"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" red="0.79421073717948709" green="0.21887676186919619" blue="0.44558953987521294" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.47926682692307687" green="0.11019400439915615" blue="0.12888659314960449" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="0.057942452253807786" blue="0.012681426566478193" alpha="1" colorSpace="calibratedRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-375" y="162"/>
+            <point key="canvasLocation" x="580" y="-413"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="TXv-ZI-9hz"/>
+    </inferredMetricsTieBreakers>
 </document>
