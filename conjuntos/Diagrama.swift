@@ -20,16 +20,24 @@ class Diagrama: NSObject {
     var conj1 = [Int?]()
     var conj2 = [Int?]()
     var conj3 = [Int?]()
+    var ranOne : Int = 0
+    var ranTwo : Int = 0
+    var ranThree : Int = 0
     
     init(numConjuntos num: Int) {
         let c1 : Conjunto = Conjunto()
         let c2 : Conjunto = Conjunto()
         let c3 : Conjunto = Conjunto()
         
-        for i in 0...3 {
-            c1.datos[i] = i
-            c2.datos[i] = i+3
-            c3.datos[i] = i+1
+        self.ranOne = Int(arc4random_uniform(7))
+        self.ranTwo = Int(arc4random_uniform(7))
+        self.ranThree = Int(arc4random_uniform(7))
+        
+        for i in 0...4 {
+            
+            c1.datos[i] = i + Int(ranOne)
+            c2.datos[i] = i + Int(ranTwo)
+            c3.datos[i] = i + Int(ranThree)
         }
         
         if num == 2 {

@@ -24,7 +24,10 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     //Funcion que carga el diagrama en la aplicacion cada que se carga esta vista
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        reload()
+    }
+    
+    func reload() {
         if numConjuntosSegment.selectedSegmentIndex == 0 {
             vistaConjuntos.numConjuntos = 3
             vistaConjuntos.diagrama = Diagrama(numConjuntos: 3)
@@ -36,7 +39,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         
         vistaConjuntos.diagrama.calculaDiagrama()
         setLabels(numConjuntosSegment.selectedSegmentIndex, tipo: unionInterSegment.selectedSegmentIndex)
-        
+        vistaConjuntos.setNeedsDisplay()
     }
     
     //Funcion que detecta cuando se cambian el numero de conjuntos y vuelve a cargar el diagrama dependiendo el num. de conjuntos
@@ -58,7 +61,6 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     @IBAction func cambiaOperacion(sender: UISegmentedControl) {
         setLabels(numConjuntosSegment.selectedSegmentIndex, tipo: unionInterSegment.selectedSegmentIndex)
     }
-    
     
     //Funcion que despliega los elementos del conjuntos y su interseccion/union en formato de texto
     func setLabels(num: Int, tipo: Int) {
@@ -181,6 +183,10 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         popoverViewController.popoverPresentationController!.delegate = self
         popoverViewController.cambiaElementosDelegate = self
         
+        popoverViewController.popoverPresentationController?.sourceView = self.view
+        popoverViewController.popoverPresentationController?.sourceRect = CGRectMake(137,104,0,0)
+        
+        
         if segue.identifier == "a" {
             popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[0].datos.count
             
@@ -199,9 +205,20 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     
     func cambiaElementos(num: Int, conj: Int) {
         var datos = [Int?]()
+        print(num)
+        var ranNum = 0
+        if conj == 0 {
+            ranNum = vistaConjuntos.diagrama.ranOne
+        } else if conj == 1 {
+            ranNum = vistaConjuntos.diagrama.ranTwo
+        } else if conj == 2 {
+            ranNum = vistaConjuntos.diagrama.ranTwo
+        }
         
-        for i in 0...num {
-            datos.append(i)
+        if num != 0 {
+            for i in 1...num {
+                datos.append(i + ranNum)
+            }
         }
         
         vistaConjuntos.diagrama.conjuntos[conj].datos = datos
@@ -210,8 +227,9 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         vistaConjuntos.setNeedsDisplay()
     }
 
-    
-
+    @IBAction func clickReload(sender: UIButton) {
+        reload()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

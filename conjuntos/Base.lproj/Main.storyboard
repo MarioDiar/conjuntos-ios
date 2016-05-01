@@ -19,11 +19,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOt-E1-6F2" customClass="VistaConjuntos" customModule="conjuntos" customModuleProvider="target">
                                 <rect key="frame" x="20" y="200" width="280" height="248"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YH-oF-O1Z">
+                                        <rect key="frame" x="247" y="8" width="25" height="25"/>
+                                        <animations/>
+                                        <state key="normal" title="Button" image="reload_blue"/>
+                                        <connections>
+                                            <action selector="clickReload:" destination="9pv-A4-QxB" eventType="touchUpInside" id="aDz-cH-L6B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="137" y="470" width="47" height="29"/>
+                                <rect key="frame" x="137" y="468" width="47" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -36,7 +46,7 @@
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
-                                <rect key="frame" x="71" y="513" width="179" height="29"/>
+                                <rect key="frame" x="71" y="515" width="179" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -48,25 +58,11 @@
                                     <action selector="cambiaOperacion:" destination="9pv-A4-QxB" eventType="valueChanged" id="hTS-oK-QbF"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-At-vup">
-                                <rect key="frame" x="20" y="93" width="117" height="35"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Wt3-is-jwH" kind="popoverPresentation" identifier="a" popoverAnchorView="eZg-At-vup" id="TXv-ZI-9hz">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e2-Ah-mXz">
                                 <rect key="frame" x="20" y="163" width="117" height="37"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="11" height="10"/>
                                 <state key="normal" title="Button">
@@ -82,7 +78,7 @@
                                 <rect key="frame" x="137" y="173" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -90,7 +86,7 @@
                                 <rect key="frame" x="137" y="146" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -98,7 +94,7 @@
                                 <rect key="frame" x="137" y="119" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -106,7 +102,7 @@
                                 <rect key="frame" x="20" y="128" width="117" height="36"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -115,8 +111,8 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
-                                <rect key="frame" x="39" y="23" width="243" height="62"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
+                                <rect key="frame" x="20" y="23" width="280" height="62"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,9 +123,23 @@
                                 <rect key="frame" x="137" y="93" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-At-vup">
+                                <rect key="frame" x="20" y="93" width="117" height="35"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="tintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Wt3-is-jwH" kind="popoverPresentation" identifier="a" popoverAnchorView="eZg-At-vup" id="TXv-ZI-9hz">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -188,11 +198,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nk4-UT-lGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="-253"/>
+            <point key="canvasLocation" x="492" y="-253.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="reload_blue" width="2400" height="2400"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rML-M5-WXQ"/>
