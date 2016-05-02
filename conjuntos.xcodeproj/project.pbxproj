@@ -14,6 +14,9 @@
 		B102253B1CB033A9003DE77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10225391CB033A9003DE77A /* LaunchScreen.storyboard */; };
 		B11A14FE1CD6C0D300E7C4E8 /* VerElementosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A14FD1CD6C0D300E7C4E8 /* VerElementosController.swift */; };
 		B17C23CF1CD0823000DDA71D /* CambiaElementosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C23CE1CD0823000DDA71D /* CambiaElementosController.swift */; };
+		B17D84751CD7378700CDC9FA /* Main iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B17D846F1CD7378700CDC9FA /* Main iPad.storyboard */; };
+		B17D84761CD7378700CDC9FA /* Main iPhone6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B17D84711CD7378700CDC9FA /* Main iPhone6.storyboard */; };
+		B17D84771CD7378700CDC9FA /* Main iPhone6Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B17D84731CD7378700CDC9FA /* Main iPhone6Plus.storyboard */; };
 		B1E1F97E1CBD558100B65E7C /* Diagrama.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1F97D1CBD558100B65E7C /* Diagrama.swift */; };
 		B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */; };
 		B1FB03211CB4060F0097CD69 /* Conjunto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB03201CB4060F0097CD69 /* Conjunto.swift */; };
@@ -29,6 +32,9 @@
 		B102253C1CB033A9003DE77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B11A14FD1CD6C0D300E7C4E8 /* VerElementosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerElementosController.swift; sourceTree = "<group>"; };
 		B17C23CE1CD0823000DDA71D /* CambiaElementosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CambiaElementosController.swift; sourceTree = "<group>"; };
+		B17D84701CD7378700CDC9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main iPad.storyboard"; sourceTree = "<group>"; };
+		B17D84721CD7378700CDC9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main iPhone6.storyboard"; sourceTree = "<group>"; };
+		B17D84741CD7378700CDC9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main iPhone6Plus.storyboard"; sourceTree = "<group>"; };
 		B1E1F97D1CBD558100B65E7C /* Diagrama.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagrama.swift; sourceTree = "<group>"; };
 		B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaConjuntos.swift; sourceTree = "<group>"; };
 		B1FB03201CB4060F0097CD69 /* Conjunto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conjunto.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 		B102252D1CB033A9003DE77A /* conjuntos */ = {
 			isa = PBXGroup;
 			children = (
+				B17D846F1CD7378700CDC9FA /* Main iPad.storyboard */,
+				B17D84711CD7378700CDC9FA /* Main iPhone6.storyboard */,
+				B17D84731CD7378700CDC9FA /* Main iPhone6Plus.storyboard */,
 				B17C23CE1CD0823000DDA71D /* CambiaElementosController.swift */,
 				B102252E1CB033A9003DE77A /* AppDelegate.swift */,
 				B11A14FD1CD6C0D300E7C4E8 /* VerElementosController.swift */,
@@ -140,6 +149,9 @@
 			files = (
 				B102253B1CB033A9003DE77A /* LaunchScreen.storyboard in Resources */,
 				B10225381CB033A9003DE77A /* Assets.xcassets in Resources */,
+				B17D84771CD7378700CDC9FA /* Main iPhone6Plus.storyboard in Resources */,
+				B17D84751CD7378700CDC9FA /* Main iPad.storyboard in Resources */,
+				B17D84761CD7378700CDC9FA /* Main iPhone6.storyboard in Resources */,
 				B10225361CB033A9003DE77A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +190,30 @@
 				B102253A1CB033A9003DE77A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B17D846F1CD7378700CDC9FA /* Main iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B17D84701CD7378700CDC9FA /* Base */,
+			);
+			name = "Main iPad.storyboard";
+			sourceTree = "<group>";
+		};
+		B17D84711CD7378700CDC9FA /* Main iPhone6.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B17D84721CD7378700CDC9FA /* Base */,
+			);
+			name = "Main iPhone6.storyboard";
+			sourceTree = "<group>";
+		};
+		B17D84731CD7378700CDC9FA /* Main iPhone6Plus.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B17D84741CD7378700CDC9FA /* Base */,
+			);
+			name = "Main iPhone6Plus.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

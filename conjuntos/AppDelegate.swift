@@ -15,13 +15,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        UITabBar.appearance().tintColor = UIColor(red: 55, green: 55, blue:55, alpha: 1.0)
-        
+        setStoryboard()
         return true
     }
-
+    
+    func setStoryboard() {
+        let storyboard : UIStoryboard = self.grabStoryboard()
+        self.setInitialScreen(storyboard)
+    }
+    
+    func grabStoryboard() -> UIStoryboard {
+        let screenHeight = Int(UIScreen.mainScreen().bounds.size.height)
+        
+        var storyboard : UIStoryboard
+        print(screenHeight)
+        
+        switch (screenHeight) {
+        case 667:
+            storyboard = UIStoryboard(name: "Main iPhone6", bundle: nil)
+            break
+        case 736:
+            storyboard = UIStoryboard(name: "Main iPhone6Plus", bundle: nil)
+            break
+        case 1024:
+            storyboard = UIStoryboard(name: "Main iPad", bundle: nil)
+            break
+        default:
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            break
+            
+        }
+        return storyboard
+    }
+    
+    func setInitialScreen(storyboard : UIStoryboard) {
+        var initViewController : UIViewController
+        
+        initViewController = storyboard.instantiateViewControllerWithIdentifier("First")
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = initViewController
+        self.window?.makeKeyAndVisible()
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

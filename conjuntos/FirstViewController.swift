@@ -182,7 +182,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     //Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "a" || segue.identifier == "a" || segue.identifier == "c" {
+        if segue.identifier == "a" || segue.identifier == "b" || segue.identifier == "c" {
             let popoverViewController = segue.destinationViewController as! CambiaElementosController
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
             popoverViewController.popoverPresentationController!.delegate = self
@@ -217,55 +217,52 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             let num = numConjuntosSegment.selectedSegmentIndex
             let tipo = unionInterSegment.selectedSegmentIndex
             
-            print(num)
-            print(tipo)
-            
             //3 conjuntos y tipo interseccion
             if num == 0 && tipo == 0 {
                 if segue.identifier == "one" {
-                    popoverViewController.stringDatos = "A∩B = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)
                 } else if segue.identifier == "two" {
-                    popoverViewController.stringDatos = "A∩C = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters13)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters13)
                 } else if segue.identifier == "three" {
-                    popoverViewController.stringDatos = "B∩C = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters23)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters23)
                 } else if segue.identifier == "four" {
-                    popoverViewController.stringDatos = "A∩B∩C = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123)
                 }
                 
             //2 conjuntos y tipo interseccion
             } else if num == 1 && tipo == 0 {
                 if segue.identifier == "one" {
-                    popoverViewController.stringDatos = " "
+                    popoverViewController.stringDatos = "vacío"
                 } else if segue.identifier == "two" {
-                    popoverViewController.stringDatos = "A∩B = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)
                 } else if segue.identifier == "three" {
-                    popoverViewController.stringDatos = "B∩A = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)
                 } else if segue.identifier == "four" {
-                    popoverViewController.stringDatos = " "
+                    popoverViewController.stringDatos = "vacío"
                 }
                 
             //3 conjuntos y union
             } else if num == 0 && tipo == 1 {
                 if segue.identifier == "one" {
-                    popoverViewController.stringDatos = "AuB = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)
                 } else if segue.identifier == "two" {
-                    popoverViewController.stringDatos = "AuC = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union13)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union13)
                 } else if segue.identifier == "three" {
-                    popoverViewController.stringDatos = "BuC = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union23)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union23)
                 } else if segue.identifier == "four" {
-                    popoverViewController.stringDatos = "AuBuC = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union123)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union123)
                 }
                 
             //2 conjuntos y union
             } else if num == 1 && tipo == 1 {
                 if segue.identifier == "one" {
-                    popoverViewController.stringDatos = " "
+                    popoverViewController.stringDatos = "vacío"
                 } else if segue.identifier == "two" {
-                    popoverViewController.stringDatos = "AuB = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)
                 } else if segue.identifier == "three" {
-                    popoverViewController.stringDatos = "BuA = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)+"}"
+                    popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)
                 } else if segue.identifier == "four" {
-                    popoverViewController.stringDatos = " "
+                    popoverViewController.stringDatos = "vacío"
                 }
             }
             

@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOt-E1-6F2" customClass="VistaConjuntos" customModule="conjuntos" customModuleProvider="target">
-                                <rect key="frame" x="20" y="200" width="280" height="248"/>
+                                <rect key="frame" x="67" y="297" width="280" height="248"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YH-oF-O1Z">
                                         <rect key="frame" x="247" y="8" width="25" height="25"/>
@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="137" y="468" width="47" height="29"/>
+                                <rect key="frame" x="184" y="586" width="47" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -46,7 +46,7 @@
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
-                                <rect key="frame" x="71" y="515" width="179" height="29"/>
+                                <rect key="frame" x="118" y="652" width="179" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -59,7 +59,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e2-Ah-mXz">
-                                <rect key="frame" x="20" y="163" width="117" height="37"/>
+                                <rect key="frame" x="67" y="260" width="117" height="37"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHO-9d-tsk">
-                                <rect key="frame" x="137" y="173" width="163" height="27"/>
+                                <rect key="frame" x="184" y="270" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -88,7 +88,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flz-Gn-KwA">
-                                <rect key="frame" x="137" y="146" width="163" height="27"/>
+                                <rect key="frame" x="184" y="243" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omM-Ed-oXX">
-                                <rect key="frame" x="137" y="119" width="163" height="27"/>
+                                <rect key="frame" x="184" y="216" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-4I-5eq">
-                                <rect key="frame" x="20" y="128" width="117" height="36"/>
+                                <rect key="frame" x="67" y="225" width="117" height="36"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -126,16 +126,8 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
-                                <rect key="frame" x="20" y="23" width="280" height="62"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qw-Iw-EYR">
-                                <rect key="frame" x="137" y="93" width="163" height="27"/>
+                                <rect key="frame" x="184" y="190" width="163" height="27"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -148,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-At-vup">
-                                <rect key="frame" x="20" y="93" width="117" height="35"/>
+                                <rect key="frame" x="67" y="190" width="117" height="35"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -161,12 +153,20 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
+                                <rect key="frame" x="67" y="80" width="280" height="62"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="AButtonLabel" destination="eZg-At-vup" id="7ps-zc-ueY"/>
                         <outlet property="BButtonLabel" destination="K5B-4I-5eq" id="d80-69-PGS"/>
@@ -218,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nk4-UT-lGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="-549.5"/>
+            <point key="canvasLocation" x="602" y="-471.5"/>
         </scene>
         <!--Ver Elementos Controller-->
         <scene sceneID="gxJ-eN-icE">
@@ -253,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lph-ry-dxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552" y="-129.5"/>
+            <point key="canvasLocation" x="608" y="-138.5"/>
         </scene>
     </scenes>
     <resources>
