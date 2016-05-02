@@ -12,7 +12,7 @@ protocol CambiaElementosDelegate {
     func cambiaElementos(num: Int, conj: Int)
 }
 
-class PopoverController: UIViewController {
+class CambiaElementosController: UIViewController {
     
     var cambiaElementosDelegate: CambiaElementosDelegate?
     

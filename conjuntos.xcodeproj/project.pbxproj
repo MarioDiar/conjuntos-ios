@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		B102252F1CB033A9003DE77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102252E1CB033A9003DE77A /* AppDelegate.swift */; };
 		B10225311CB033A9003DE77A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10225301CB033A9003DE77A /* FirstViewController.swift */; };
-		B10225331CB033A9003DE77A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10225321CB033A9003DE77A /* SecondViewController.swift */; };
 		B10225361CB033A9003DE77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10225341CB033A9003DE77A /* Main.storyboard */; };
 		B10225381CB033A9003DE77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10225371CB033A9003DE77A /* Assets.xcassets */; };
 		B102253B1CB033A9003DE77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10225391CB033A9003DE77A /* LaunchScreen.storyboard */; };
-		B17C23CF1CD0823000DDA71D /* PopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C23CE1CD0823000DDA71D /* PopoverController.swift */; };
+		B11A14FE1CD6C0D300E7C4E8 /* VerElementosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A14FD1CD6C0D300E7C4E8 /* VerElementosController.swift */; };
+		B17C23CF1CD0823000DDA71D /* CambiaElementosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C23CE1CD0823000DDA71D /* CambiaElementosController.swift */; };
 		B1E1F97E1CBD558100B65E7C /* Diagrama.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1F97D1CBD558100B65E7C /* Diagrama.swift */; };
 		B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */; };
 		B1FB03211CB4060F0097CD69 /* Conjunto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB03201CB4060F0097CD69 /* Conjunto.swift */; };
@@ -23,12 +23,12 @@
 		B102252B1CB033A9003DE77A /* conjuntos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conjuntos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102252E1CB033A9003DE77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B10225301CB033A9003DE77A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B10225321CB033A9003DE77A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B10225351CB033A9003DE77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B10225371CB033A9003DE77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B102253A1CB033A9003DE77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B102253C1CB033A9003DE77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B17C23CE1CD0823000DDA71D /* PopoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
+		B11A14FD1CD6C0D300E7C4E8 /* VerElementosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerElementosController.swift; sourceTree = "<group>"; };
+		B17C23CE1CD0823000DDA71D /* CambiaElementosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CambiaElementosController.swift; sourceTree = "<group>"; };
 		B1E1F97D1CBD558100B65E7C /* Diagrama.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagrama.swift; sourceTree = "<group>"; };
 		B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaConjuntos.swift; sourceTree = "<group>"; };
 		B1FB03201CB4060F0097CD69 /* Conjunto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conjunto.swift; sourceTree = "<group>"; };
@@ -64,10 +64,10 @@
 		B102252D1CB033A9003DE77A /* conjuntos */ = {
 			isa = PBXGroup;
 			children = (
-				B17C23CE1CD0823000DDA71D /* PopoverController.swift */,
+				B17C23CE1CD0823000DDA71D /* CambiaElementosController.swift */,
 				B102252E1CB033A9003DE77A /* AppDelegate.swift */,
+				B11A14FD1CD6C0D300E7C4E8 /* VerElementosController.swift */,
 				B10225301CB033A9003DE77A /* FirstViewController.swift */,
-				B10225321CB033A9003DE77A /* SecondViewController.swift */,
 				B1FB03201CB4060F0097CD69 /* Conjunto.swift */,
 				B10225341CB033A9003DE77A /* Main.storyboard */,
 				B1E1F97D1CBD558100B65E7C /* Diagrama.swift */,
@@ -152,8 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1E1F97E1CBD558100B65E7C /* Diagrama.swift in Sources */,
-				B10225331CB033A9003DE77A /* SecondViewController.swift in Sources */,
-				B17C23CF1CD0823000DDA71D /* PopoverController.swift in Sources */,
+				B11A14FE1CD6C0D300E7C4E8 /* VerElementosController.swift in Sources */,
+				B17C23CF1CD0823000DDA71D /* CambiaElementosController.swift in Sources */,
 				B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */,
 				B102252F1CB033A9003DE77A /* AppDelegate.swift in Sources */,
 				B1FB03211CB4060F0097CD69 /* Conjunto.swift in Sources */,

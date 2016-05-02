@@ -81,6 +81,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="8eh-8p-Q5b" kind="popoverPresentation" identifier="four" popoverAnchorView="zHO-9d-tsk" id="8gd-xL-n5H">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flz-Gn-KwA">
                                 <rect key="frame" x="137" y="146" width="163" height="27"/>
@@ -89,6 +94,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="8eh-8p-Q5b" kind="popoverPresentation" identifier="three" popoverAnchorView="flz-Gn-KwA" id="l5c-bt-Hwt">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omM-Ed-oXX">
                                 <rect key="frame" x="137" y="119" width="163" height="27"/>
@@ -97,6 +107,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="8eh-8p-Q5b" kind="popoverPresentation" identifier="two" popoverAnchorView="omM-Ed-oXX" id="CIq-oS-w8u">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-4I-5eq">
                                 <rect key="frame" x="20" y="128" width="117" height="36"/>
@@ -126,6 +141,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" red="0.97138715760000005" green="1" blue="0.97947148210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="8eh-8p-Q5b" kind="popoverPresentation" identifier="one" popoverAnchorView="1Qw-Iw-EYR" id="qdc-BU-rxb">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-At-vup">
                                 <rect key="frame" x="20" y="93" width="117" height="35"/>
@@ -162,12 +182,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="-253"/>
+            <point key="canvasLocation" x="148" y="-297"/>
         </scene>
-        <!--Popover Controller-->
+        <!--Cambia Elementos Controller-->
         <scene sceneID="uI2-5U-ao0">
             <objects>
-                <viewController id="Wt3-is-jwH" customClass="PopoverController" customModule="conjuntos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wt3-is-jwH" customClass="CambiaElementosController" customModule="conjuntos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pyx-Du-XuI"/>
                         <viewControllerLayoutGuide type="bottom" id="PAU-2H-CAb"/>
@@ -198,7 +218,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nk4-UT-lGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492" y="-253.5"/>
+            <point key="canvasLocation" x="602" y="-471.5"/>
+        </scene>
+        <!--Ver Elementos Controller-->
+        <scene sceneID="gxJ-eN-icE">
+            <objects>
+                <viewController id="8eh-8p-Q5b" customClass="VerElementosController" customModule="conjuntos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pey-6m-9D3"/>
+                        <viewControllerLayoutGuide type="bottom" id="db3-6u-uCM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YfK-Fk-Cd3">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="33"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-Uh-9Ne">
+                                <rect key="frame" x="6" y="4" width="189" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.31345929379999998" green="0.56016214180000001" blue="0.49099731299999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="33"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="33"/>
+                    <connections>
+                        <outlet property="datosLabel" destination="oj6-Uh-9Ne" id="0eC-jr-mAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lph-ry-dxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608" y="-138.5"/>
         </scene>
     </scenes>
     <resources>
@@ -207,5 +262,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rML-M5-WXQ"/>
+        <segue reference="qdc-BU-rxb"/>
     </inferredMetricsTieBreakers>
 </document>

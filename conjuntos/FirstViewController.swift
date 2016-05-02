@@ -177,36 +177,109 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         
     }
     
+    
+    
+    //Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let popoverViewController = segue.destinationViewController as! PopoverController
-        popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
-        popoverViewController.popoverPresentationController!.delegate = self
-        popoverViewController.cambiaElementosDelegate = self
         
-        popoverViewController.popoverPresentationController?.sourceView = self.view
-        popoverViewController.popoverPresentationController?.sourceRect = CGRectMake(137,104,0,0)
-        
-        
-        if segue.identifier == "a" {
-            popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[0].datos.count
+        if segue.identifier == "a" || segue.identifier == "a" || segue.identifier == "c" {
+            let popoverViewController = segue.destinationViewController as! CambiaElementosController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
             
-            popoverViewController.numDeConjunto = 0
             
-        } else if segue.identifier == "b" {
-            popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[1].datos.count
-            popoverViewController.numDeConjunto = 1
+            popoverViewController.popoverPresentationController?.sourceView = self.view
+            popoverViewController.popoverPresentationController?.sourceRect = CGRectMake(137,104,0,0)
+            popoverViewController.cambiaElementosDelegate = self
             
-        } else if segue.identifier == "c" {
-            popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[2].datos.count
-            popoverViewController.numDeConjunto = 2
+            if segue.identifier == "a" {
+                popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[0].datos.count
+                popoverViewController.numDeConjunto = 0
+                
+            } else if segue.identifier == "b" {
+                popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[1].datos.count
+                popoverViewController.numDeConjunto = 1
+                
+            } else if segue.identifier == "c" {
+                popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[2].datos.count
+                popoverViewController.numDeConjunto = 2
+                
+            }
+            
+        } else {
+            let popoverViewController = segue.destinationViewController as! VerElementosController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+            
+            popoverViewController.popoverPresentationController?.sourceView = self.view
+            popoverViewController.popoverPresentationController?.sourceRect = CGRectMake(137,104,0,0)
+            
+            let num = numConjuntosSegment.selectedSegmentIndex
+            let tipo = unionInterSegment.selectedSegmentIndex
+            
+            print(num)
+            print(tipo)
+            
+            //3 conjuntos y tipo interseccion
+            if num == 0 && tipo == 0 {
+                if segue.identifier == "one" {
+                    popoverViewController.stringDatos = "A∩B = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)+"}"
+                } else if segue.identifier == "two" {
+                    popoverViewController.stringDatos = "A∩C = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters13)+"}"
+                } else if segue.identifier == "three" {
+                    popoverViewController.stringDatos = "B∩C = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters23)+"}"
+                } else if segue.identifier == "four" {
+                    popoverViewController.stringDatos = "A∩B∩C = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123)+"}"
+                }
+                
+            //2 conjuntos y tipo interseccion
+            } else if num == 1 && tipo == 0 {
+                if segue.identifier == "one" {
+                    popoverViewController.stringDatos = " "
+                } else if segue.identifier == "two" {
+                    popoverViewController.stringDatos = "A∩B = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)+"}"
+                } else if segue.identifier == "three" {
+                    popoverViewController.stringDatos = "B∩A = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters12)+"}"
+                } else if segue.identifier == "four" {
+                    popoverViewController.stringDatos = " "
+                }
+                
+            //3 conjuntos y union
+            } else if num == 0 && tipo == 1 {
+                if segue.identifier == "one" {
+                    popoverViewController.stringDatos = "AuB = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)+"}"
+                } else if segue.identifier == "two" {
+                    popoverViewController.stringDatos = "AuC = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union13)+"}"
+                } else if segue.identifier == "three" {
+                    popoverViewController.stringDatos = "BuC = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union23)+"}"
+                } else if segue.identifier == "four" {
+                    popoverViewController.stringDatos = "AuBuC = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union123)+"}"
+                }
+                
+            //2 conjuntos y union
+            } else if num == 1 && tipo == 1 {
+                if segue.identifier == "one" {
+                    popoverViewController.stringDatos = " "
+                } else if segue.identifier == "two" {
+                    popoverViewController.stringDatos = "AuB = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)+"}"
+                } else if segue.identifier == "three" {
+                    popoverViewController.stringDatos = "BuA = {"+vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)+"}"
+                } else if segue.identifier == "four" {
+                    popoverViewController.stringDatos = " "
+                }
+            }
+            
+            
+            
             
         }
     }
     
+    //Funcion que cambia los elementos dentro de un conjunto, de acuerdo al valor random que tienen
     func cambiaElementos(num: Int, conj: Int) {
         var datos = [Int?]()
-        print(num)
         var ranNum = 0
+        
         if conj == 0 {
             ranNum = vistaConjuntos.diagrama.ranOne
         } else if conj == 1 {
