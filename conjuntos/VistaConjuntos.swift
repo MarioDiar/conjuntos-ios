@@ -15,8 +15,6 @@ class VistaConjuntos: UIView {
         //Contexto donde se dibujara
         let contexto = UIGraphicsGetCurrentContext()
         
-        
-        
         //Colores transparentes
         let orangeTrans = CGColorCreateCopyWithAlpha(UIColor.orangeColor().CGColor, 0.2)
         let magentaTrans = CGColorCreateCopyWithAlpha(UIColor.redColor().CGColor, 0.3)
@@ -172,31 +170,4 @@ class VistaConjuntos: UIView {
         }
     }
 }
-
-
-
-//DEBUGGING
-//            print("DATOS CONJ 1: ")
-//            print(diagrama.conjuntos[0].datos)
-//            print("DATOS CONJ 2: ")
-//            print(diagrama.conjuntos[1].datos)
-//            print("DATOS CONJ 3: ")
-//            print(diagrama.conjuntos[2].datos)
-//
-//            print("||||||||||||||||||||||||||")
-//
-//            print("inters 1 2")
-//            print(diagrama.inters12)
-//            print("inters 1 3")
-//            print(diagrama.inters13)
-//            print("inters 2 3")
-//            print(diagrama.inters23)
-//            print("inters 1 2 3")
-//            print(diagrama.inters123)
-//            print("conj 1")
-//            print(diagrama.conj1)
-//            print("conj 2")
-//            print(diagrama.conj2)
-//            print("conj 3")
-//            print(diagrama.conj3)
 

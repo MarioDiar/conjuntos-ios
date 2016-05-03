@@ -265,10 +265,6 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
                     popoverViewController.stringDatos = "vacío"
                 }
             }
-            
-            
-            
-            
         }
     }
     
@@ -286,7 +282,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         }
         
         if num != 0 {
-            for i in 1...num {
+            for i in 0...num {
                 datos.append(i + ranNum)
             }
         }

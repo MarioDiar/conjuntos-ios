@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="184" y="586" width="47" height="29"/>
+                                <rect key="frame" x="145" y="582" width="124" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -46,7 +46,7 @@
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
-                                <rect key="frame" x="118" y="652" width="179" height="29"/>
+                                <rect key="frame" x="75" y="653" width="265" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -154,7 +154,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
-                                <rect key="frame" x="67" y="80" width="280" height="62"/>
+                                <rect key="frame" x="67" y="38" width="280" height="62"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>

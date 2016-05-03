@@ -32,19 +32,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="137" y="468" width="47" height="29"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="3"/>
-                                    <segment title="2"/>
-                                </segments>
-                                <color key="tintColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
-                                </connections>
-                            </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
                                 <rect key="frame" x="71" y="515" width="179" height="29"/>
                                 <animations/>
@@ -161,6 +148,19 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
+                                <rect key="frame" x="112" y="468" width="97" height="29"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="3"/>
+                                    <segment title="2"/>
+                                </segments>
+                                <color key="tintColor" red="0.29019607843137252" green="0.4823529411764706" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
