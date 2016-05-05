@@ -182,7 +182,12 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     //Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "a" || segue.identifier == "b" || segue.identifier == "c" {
+        if segue.identifier == "creditos" {
+            let popoverViewController = segue.destinationViewController as! CreditosController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+            
+        } else if segue.identifier == "a" || segue.identifier == "b" || segue.identifier == "c" {
             let popoverViewController = segue.destinationViewController as! CambiaElementosController
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
             popoverViewController.popoverPresentationController!.delegate = self
@@ -205,7 +210,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
                 popoverViewController.numDeConjunto = 2
                 
             }
-            
+
         } else {
             let popoverViewController = segue.destinationViewController as! VerElementosController
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
@@ -229,7 +234,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
                     popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.inters123)
                 }
                 
-            //2 conjuntos y tipo interseccion
+                //2 conjuntos y tipo interseccion
             } else if num == 1 && tipo == 0 {
                 if segue.identifier == "one" {
                     popoverViewController.stringDatos = "vacío"
@@ -241,7 +246,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
                     popoverViewController.stringDatos = "vacío"
                 }
                 
-            //3 conjuntos y union
+                //3 conjuntos y union
             } else if num == 0 && tipo == 1 {
                 if segue.identifier == "one" {
                     popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union12)
@@ -253,7 +258,7 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
                     popoverViewController.stringDatos = vistaConjuntos.diagrama.arrayToString(vistaConjuntos.diagrama.union123)
                 }
                 
-            //2 conjuntos y union
+                //2 conjuntos y union
             } else if num == 1 && tipo == 1 {
                 if segue.identifier == "one" {
                     popoverViewController.stringDatos = "vacío"
@@ -280,7 +285,6 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
         } else if conj == 2 {
             ranNum = vistaConjuntos.diagrama.ranTwo
         }
-        
         if num != 0 {
             for i in 0...num {
                 datos.append(i + ranNum)

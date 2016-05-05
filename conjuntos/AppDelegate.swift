@@ -37,9 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case 736:
             storyboard = UIStoryboard(name: "Main iPhone6Plus", bundle: nil)
             break
-        case 1024:
-            storyboard = UIStoryboard(name: "Main iPad", bundle: nil)
-            break
         default:
             storyboard = UIStoryboard(name: "Main", bundle: nil)
             break
