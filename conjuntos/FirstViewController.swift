@@ -182,7 +182,15 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
     //Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "creditos" {
+        
+        if segue.identifier == "explicacion" {
+            
+            let popoverViewController = segue.destinationViewController as! ExplicacionViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+            
+        } else if segue.identifier == "creditos" {
+            
             let popoverViewController = segue.destinationViewController as! CreditosController
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
             popoverViewController.popoverPresentationController!.delegate = self
@@ -197,19 +205,33 @@ class FirstViewController: UIViewController, UIPopoverPresentationControllerDele
             popoverViewController.popoverPresentationController?.sourceRect = CGRectMake(137,104,0,0)
             popoverViewController.cambiaElementosDelegate = self
             
-            if segue.identifier == "a" {
-                popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[0].datos.count
-                popoverViewController.numDeConjunto = 0
-                
-            } else if segue.identifier == "b" {
-                popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[1].datos.count
-                popoverViewController.numDeConjunto = 1
-                
-            } else if segue.identifier == "c" {
-                popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[2].datos.count
-                popoverViewController.numDeConjunto = 2
-                
+            let num = numConjuntosSegment.selectedSegmentIndex
+            
+            
+            if num == 1 {
+                if segue.identifier == "a" {
+                    popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[0].datos.count
+                    popoverViewController.numDeConjunto = 0
+                    
+                } else if segue.identifier == "c" {
+                    popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[1].datos.count
+                    popoverViewController.numDeConjunto = 1
+                }
+            } else {
+                if segue.identifier == "a" {
+                    popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[0].datos.count
+                    popoverViewController.numDeConjunto = 0
+                    
+                } else if segue.identifier == "b" {
+                    popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[1].datos.count
+                    popoverViewController.numDeConjunto = 1
+                } else if segue.identifier == "c" {
+                    popoverViewController.numConjuntos = vistaConjuntos.diagrama.conjuntos[2].datos.count
+                    popoverViewController.numDeConjunto = 2
+                }
             }
+            
+            
 
         } else {
             let popoverViewController = segue.destinationViewController as! VerElementosController

@@ -31,7 +31,7 @@
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-hx-Tv6">
-                                <rect key="frame" x="71" y="503" width="179" height="29"/>
+                                <rect key="frame" x="71" y="495" width="179" height="29"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="Intersección"/>
@@ -105,8 +105,8 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
-                                <rect key="frame" x="20" y="23" width="280" height="62"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="!Haz click en los textos de la caja gris para editar los conjuntos! !Aprende como se comportan!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-jx-dX8">
+                                <rect key="frame" x="20" y="23" width="280" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -138,7 +138,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-iv-n5a">
-                                <rect key="frame" x="112" y="461" width="97" height="29"/>
+                                <rect key="frame" x="112" y="457" width="97" height="29"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="3"/>
@@ -149,8 +149,20 @@
                                     <action selector="cambiaNumSegment:" destination="9pv-A4-QxB" eventType="valueChanged" id="9lB-hZ-mmU"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9a-bZ-z9O">
+                                <rect key="frame" x="5" y="527" width="84" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Explicación">
+                                    <color key="titleColor" red="0.1058823529" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kU7-Yn-tgO" kind="popoverPresentation" identifier="explicacion" popoverAnchorView="p9a-bZ-z9O" id="Zc5-4e-VkW">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-dG-Uec">
-                                <rect key="frame" x="230" y="535" width="83" height="23"/>
+                                <rect key="frame" x="232" y="527" width="84" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Créditos">
                                     <color key="titleColor" red="0.10588235294117647" green="0.13333333333333333" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
@@ -262,16 +274,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jz1-Vd-pR3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz1-Vd-pR3">
                                 <rect key="frame" x="5" y="8" width="240" height="264"/>
-                                <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">PrepaNet Conjuntos a sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Enero Mayo de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.Desarrolladores:Luis Mario Díaz RincónPrepaNet Conjuntos se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
-                                <color key="textColor" red="0.99376900525092693" green="0.986586958281227" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.1803921568627451" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.61960784313725492" green="0.68235294117647061" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="250" height="280"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -283,12 +295,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIz-VO-xez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="-49"/>
+            <point key="canvasLocation" x="576" y="-35"/>
+        </scene>
+        <!--Explicacion View Controller-->
+        <scene sceneID="gVv-4q-B4Q">
+            <objects>
+                <viewController id="kU7-Yn-tgO" customClass="ExplicacionViewController" customModule="conjuntos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vku-q3-Sz1"/>
+                        <viewControllerLayoutGuide type="bottom" id="8oB-L2-wGO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4gE-7l-6Tj">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="La intersección de dos conjuntos A y B es otro conjunto A∩B cuyos elementos son los elementos comunes de A y B:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I1q-gI-m3w">
+                                <rect key="frame" x="5" y="0.0" width="240" height="72"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="La unión de dos conjuntos A y B es otro conjunto AUB cuyos elementos son todos los elementos de A y/o B:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57z-WO-RLo">
+                                <rect key="frame" x="5" y="142" width="240" height="59"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="union" translatesAutoresizingMaskIntoConstraints="NO" id="AVn-7G-1dD">
+                                <rect key="frame" x="50" y="186" width="149" height="102"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inter" translatesAutoresizingMaskIntoConstraints="NO" id="TnC-gp-ZIz">
+                                <rect key="frame" x="51" y="60" width="149" height="102"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="250" height="280"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="250" height="280"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irA-V1-Psb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="254"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="inter" width="560" height="393"/>
         <image name="reload_blue" width="2400" height="2400"/>
+        <image name="union" width="560" height="393"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rML-M5-WXQ"/>

@@ -19,6 +19,7 @@
 		B1E1F97E1CBD558100B65E7C /* Diagrama.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1F97D1CBD558100B65E7C /* Diagrama.swift */; };
 		B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */; };
 		B1F5F5571CDACCDC00957AF3 /* CreditosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F5F5561CDACCDC00957AF3 /* CreditosController.swift */; };
+		B1F5F5591CDB001700957AF3 /* ExplicacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F5F5581CDB001700957AF3 /* ExplicacionViewController.swift */; };
 		B1FB03211CB4060F0097CD69 /* Conjunto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB03201CB4060F0097CD69 /* Conjunto.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		B1E1F97D1CBD558100B65E7C /* Diagrama.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagrama.swift; sourceTree = "<group>"; };
 		B1E2380F1CB394BC00D08163 /* VistaConjuntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaConjuntos.swift; sourceTree = "<group>"; };
 		B1F5F5561CDACCDC00957AF3 /* CreditosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditosController.swift; sourceTree = "<group>"; };
+		B1F5F5581CDB001700957AF3 /* ExplicacionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplicacionViewController.swift; sourceTree = "<group>"; };
 		B1FB03201CB4060F0097CD69 /* Conjunto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conjunto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				B11A14FD1CD6C0D300E7C4E8 /* VerElementosController.swift */,
 				B1F5F5561CDACCDC00957AF3 /* CreditosController.swift */,
 				B10225301CB033A9003DE77A /* FirstViewController.swift */,
+				B1F5F5581CDB001700957AF3 /* ExplicacionViewController.swift */,
 				B1FB03201CB4060F0097CD69 /* Conjunto.swift */,
 				B10225341CB033A9003DE77A /* Main.storyboard */,
 				B1E1F97D1CBD558100B65E7C /* Diagrama.swift */,
@@ -168,6 +171,7 @@
 				B17C23CF1CD0823000DDA71D /* CambiaElementosController.swift in Sources */,
 				B1E238101CB394BC00D08163 /* VistaConjuntos.swift in Sources */,
 				B1F5F5571CDACCDC00957AF3 /* CreditosController.swift in Sources */,
+				B1F5F5591CDB001700957AF3 /* ExplicacionViewController.swift in Sources */,
 				B102252F1CB033A9003DE77A /* AppDelegate.swift in Sources */,
 				B1FB03211CB4060F0097CD69 /* Conjunto.swift in Sources */,
 				B10225311CB033A9003DE77A /* FirstViewController.swift in Sources */,

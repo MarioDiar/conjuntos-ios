@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let screenHeight = Int(UIScreen.mainScreen().bounds.size.height)
         
         var storyboard : UIStoryboard
-        print(screenHeight)
         
         switch (screenHeight) {
         case 667:
